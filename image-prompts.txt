@@ -1,0 +1,249 @@
+AI IMAGE GENERATION PROMPTS FOR SYAALA BROCHURE
+═══════════════════════════════════════════════════════════════════
+
+Use these prompts with Midjourney, DALL-E, or your preferred AI image generator.
+All images should be high resolution (at least 2048px wide) for print quality.
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 1: HERO COVER IMAGE
+──────────────────────────
+Filename: slide-01-hero.jpg
+
+Prompt:
+Cinematic wide shot of industrial shipping containers in a dark moody environment, dramatic volumetric lighting with warm orange accent lights along container edges, billowing mist and atmospheric haze, sunset golden hour lighting, containers stacked in modern configuration, industrial elegance, photorealistic, 8k, cinematic color grading, shallow depth of field, dark blacks with orange highlights --ar 16:9 --style raw
+
+Style: Photorealistic, cinematic, industrial
+Mood: Epic, powerful, future-forward
+Colors: Deep blacks, warm orange accents (#FF9D5C), moody atmospheric lighting
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 2: PROBLEM - TRADITIONAL VS MODERN
+─────────────────────────────────────────
+Filename: slide-02-crisis.jpg
+
+Prompt:
+Split composition diagonal divide, left side shows old traditional data center construction with concrete, cranes, construction site, warm orange tones, right side shows modern NVIDIA GPU server chips with intricate circuits, light blue cooling glow, condensation droplets, high-tech macro photography, photorealistic, cinematic lighting, gradient blur transition between old and new, 8k --ar 16:9 --style raw
+
+Style: Photorealistic split composition
+Mood: Contrast between old/slow and new/fast
+Colors: Warm orange (traditional), cool blue (modern)
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 3: SOLUTION - CONTAINER POD REVEAL
+─────────────────────────────────────────
+Filename: slide-03-container-pod.jpg
+
+Prompt:
+Sleek modern shipping container data center pod, matte black finish with premium industrial design, warm orange LED accent lighting strips along edges, billowing cool blue mist from ventilation system creating atmospheric effect, floating on dark gradient background with subtle shadows, Apple product photography style, minimal and clean, photorealistic 3D render, studio lighting, premium tech aesthetic, 8k --ar 16:9 --style raw
+
+Style: Premium product photography, Apple-style
+Mood: Clean, premium, technological sophistication
+Colors: Matte black, orange LED accents (#FF9D5C), blue cooling mist (#5CC8FF)
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 5: COMPUTE PODS INTERIOR
+───────────────────────────────
+Filename: slide-05-compute-interior.jpg
+
+Prompt:
+Interior of high-density GPU data center, rows of NVIDIA server racks with warm orange LED indicators, cinematic industrial lighting with depth of field blur, cables and infrastructure visible, dramatic side lighting creating shadows, heat shimmer effect in air, industrial elegance, photorealistic, 8k, cinematic color grading, dark environment with orange accent lights --ar 16:9 --style raw
+
+Style: Cinematic industrial photography
+Mood: Raw power, serious engineering, heat and computational intensity
+Colors: Deep blacks, warm orange LEDs (#FF9D5C), industrial metals
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 6: LIQUID COOLING MACRO
+──────────────────────────────
+Filename: slide-06-liquid-cooling.jpg
+
+Prompt:
+Extreme macro close-up of liquid cooling system on GPU die, transparent tubes with flowing light blue coolant, condensation droplets on metal surfaces, glowing orange GPU circuits underneath, dramatic lighting highlighting reflections, photorealistic macro photography, depth of field, high-tech aesthetic, 8k, intricate details of tubes and connectors --ar 16:9 --style raw
+
+Style: Macro photography, high-tech detail
+Mood: Precision engineering, cooling technology
+Colors: Light blue coolant (#5CC8FF), orange glowing circuits, metallic reflections
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 7: POWER DISTRIBUTION
+────────────────────────────
+Filename: slide-07-power-energy.jpg
+
+Prompt:
+Abstract visualization of electrical power distribution, glowing orange energy flow lines and circuits, dramatic electrical arcs, circuit breakers and transformer coils with warm lighting, industrial power infrastructure, volumetric lighting with orange and amber glow, photorealistic but stylized, energy and electricity theme, dark background with bright orange accents, 8k --ar 16:9 --style raw
+
+Style: Abstract visualization with realistic elements
+Mood: Energy, power, electrical infrastructure
+Colors: Warm orange (#FF9D5C), amber glow (#FFA366), electrical blue sparks
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 8: COOLING SYSTEM
+────────────────────────
+Filename: slide-08-cooling-system.jpg
+
+Prompt:
+Ethereal cooling system with light blue illuminated coolant flowing through transparent pipes, heavy condensation and water droplets on metal surfaces, cold air vapor and mist effects, frost forming on pipes, dramatic blue-tinted lighting, photorealistic industrial photography, smooth flowing curves suggesting liquid movement, ice crystals, scientific precision, 8k --ar 16:9 --style raw
+
+Style: Atmospheric industrial photography
+Mood: Cold, precision, scientific elegance
+Colors: Light blue (#5CC8FF), cyan (#66D9FF), white frost, silver metals
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 9: MODULAR YARD AERIAL VIEW
+──────────────────────────────────
+Filename: slide-09-modular-yard.jpg
+
+Prompt:
+Aerial drone shot of modern modular data center yard showing diverse container types - compute pods with orange accent LEDs, cooling pods with blue vapor rising from vents, power distribution pods with warm lighting, all arranged in organized geometric configuration on industrial concrete yard, cables and conduits connecting different pod types, sunset golden hour lighting creating long shadows, cinematic wide shot showing scale and modularity, modern industrial architecture, 8k, photorealistic --ar 16:9 --style raw
+
+Style: Aerial photography, cinematic
+Mood: Scale, modular flexibility, industrial beauty, diverse infrastructure
+Colors: Black containers, orange lights (#FF9D5C) on compute pods, blue vapor (#5CC8FF) from cooling, golden hour sky
+Note: Show variety - different sized containers (20ft/40ft), interconnected pods, cables between units
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 10: FACTORY & ISO QUALITY
+────────────────────────────────
+Filename: slide-10-factory-iso.jpg
+
+Prompt:
+Modern manufacturing facility for data center containers, clean industrial factory floor with workers in white clean room suits assembling shipping container pods, robotic arms and precision equipment, ISO quality control inspection stations, organized production line, cinematic industrial lighting with warm overhead lights, high-tech precision manufacturing, quality assurance testing equipment visible, professional industrial photography, 8k, photorealistic --ar 16:9 --style raw
+
+Style: Industrial photography, clean manufacturing aesthetic
+Mood: Precision, quality, professional production, trust
+Colors: Clean whites, industrial grays, warm factory lighting, organized workflow
+Note: Show professionalism, ISO standards, quality control processes
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 12: SUSTAINABILITY - NATURE + TECH
+─────────────────────────────────────────
+Filename: slide-12-sustainability.jpg
+
+Prompt:
+Modern black shipping container data center pod integrated organically into lush green forest environment, sunlight filtering through leaves creating dappled lighting, natural and technological harmony, container partially covered with vines and moss, serene natural setting with industrial technology, photorealistic, environmental sustainability theme, soft natural lighting, 8k --ar 16:9 --style raw
+
+Style: Photorealistic nature photography blended with tech
+Mood: Harmony, sustainability, responsible innovation
+Colors: Green foliage, natural sunlight, black container, earth tones
+
+
+═══════════════════════════════════════════════════════════════════
+
+SLIDE 13: FUTURE TECH ABSTRACT
+───────────────────────────────
+Filename: slide-13-future-network.jpg
+
+Prompt:
+Abstract futuristic data visualization with glowing neon green network connections, flowing data streams, black shipping containers integrated into digital network grid, holographic interface elements, particle effects, dark background with bright neon green (#00FFA8) highlights, technological and forward-thinking aesthetic, 8k, cinematic --ar 16:9 --style raw
+
+Style: Abstract tech visualization
+Mood: Future-forward, innovative, connected
+Colors: Deep black, neon green (#00FFA8), digital blue accents
+
+
+═══════════════════════════════════════════════════════════════════
+
+OPTIONAL: ADDITIONAL DETAIL IMAGES
+───────────────────────────────────
+
+If you want more visual variety, generate these extras:
+
+NVIDIA GPU CLOSE-UP:
+"Extreme close-up of NVIDIA H100 GPU chip with intricate circuits, warm orange LED indicators, photorealistic macro, 8k --ar 16:9 --style raw"
+
+CABLE MANAGEMENT:
+"Professional data center cable management, orange and blue fiber optic cables neatly organized, industrial precision, photorealistic --ar 16:9 --style raw"
+
+CONTROL ROOM:
+"Modern data center control room with monitoring screens showing thermal maps in orange and blue, cinematic lighting, industrial aesthetic --ar 16:9 --style raw"
+
+
+═══════════════════════════════════════════════════════════════════
+
+GENERATION SETTINGS & TIPS
+───────────────────────────────────────────────────────────────────
+
+For Midjourney:
+- Use --ar 16:9 for landscape format
+- Use --style raw for more photorealistic results
+- Use --v 6 or latest version
+- Add --q 2 for maximum quality
+
+For DALL-E 3:
+- Request "photorealistic, 8k resolution, cinematic"
+- Specify "landscape orientation, wide format"
+- Request "professional photography quality"
+
+For Stable Diffusion:
+- Use realistic checkpoint models (Realistic Vision, DreamShaper)
+- Resolution: 1536x864 or higher
+- Add negative prompts: "cartoon, anime, illustration, painting, drawing"
+
+Color Accuracy:
+- Reference hex codes when possible
+- Orange: #FF9D5C (warm, heat, power)
+- Blue: #5CC8FF (cool, water, thermal)
+- Green: #00FFA8 (accent, CTA, highlights)
+
+Post-Processing:
+- Adjust curves to deepen blacks
+- Enhance orange/blue color separation
+- Add subtle film grain for premium feel
+- Ensure images are sharp and high-contrast
+
+
+═══════════════════════════════════════════════════════════════════
+
+DELIVERY INSTRUCTIONS
+───────────────────────────────────────────────────────────────────
+
+Once generated, save images with these exact filenames:
+1. slide-01-hero.jpg
+2. slide-02-crisis.jpg
+3. slide-03-container-pod.jpg
+4. slide-05-compute-interior.jpg
+5. slide-06-liquid-cooling.jpg
+6. slide-07-power-energy.jpg
+7. slide-08-cooling-system.jpg
+8. slide-09-modular-yard.jpg
+9. slide-12-sustainability.jpg
+10. slide-13-future-network.jpg
+
+Place all images in: /Users/nambjay/email-marketing-crm/marketing/images/
+
+Then tell me and I'll integrate them into the HTML with organic curved masks.
+
+
+═══════════════════════════════════════════════════════════════════
+
+PRIORITY ORDER
+───────────────────────────────────────────────────────────────────
+
+If generating all at once is too much, prioritize in this order:
+1. slide-03-container-pod.jpg (hero product shot)
+2. slide-01-hero.jpg (cover image)
+3. slide-09-modular-yard.jpg (scale/configuration shot)
+4. slide-05-compute-interior.jpg (compute power)
+5. slide-08-cooling-system.jpg (cooling tech)
+6. Rest in any order
+
+These 5 images will give maximum visual impact across the presentation.

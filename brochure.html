@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syaala Modular Infrastructure - Product Brochure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #000000;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 0;
+      margin: 0 auto;
+      background: #000000;
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+    }
+
+    /* Cover Page */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 80px 60px;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      border-top: 3px solid #00FFA8;
+    }
+
+    .cover-logo {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: #FFFFFF;
+    }
+
+    .cover-title {
+      margin-top: 120px;
+    }
+
+    .cover-title h1 {
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1.1;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #888888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cover-title .accent {
+      color: #00FFA8;
+      -webkit-text-fill-color: #00FFA8;
+    }
+
+    .cover-subtitle {
+      font-size: 24px;
+      font-weight: 300;
+      color: #888888;
+      letter-spacing: 0.5px;
+      margin-top: 20px;
+    }
+
+    .cover-footer {
+      border-top: 1px solid #2a2a2a;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #666666;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Content Pages */
+    .content-page {
+      padding: 80px 60px;
+    }
+
+    .page-header {
+      border-bottom: 2px solid #00FFA8;
+      padding-bottom: 20px;
+      margin-bottom: 60px;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      font-size: 14px;
+      color: #666666;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 25px;
+      margin-top: 50px;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #00FFA8;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #CCCCCC;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #00FFA8;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .feature-box {
+      background: #0a0a0a;
+      border: 1px solid #2a2a2a;
+      padding: 30px;
+      border-radius: 2px;
+    }
+
+    .feature-box h4 {
+      margin-top: 0;
+    }
+
+    .spec-list {
+      list-style: none;
+      margin-top: 30px;
+    }
+
+    .spec-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .spec-value {
+      color: #00FFA8;
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      border-left: 4px solid #00FFA8;
+      padding: 40px;
+      margin: 50px 0;
+    }
+
+    .highlight-box p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #FFFFFF;
+    }
+
+    .cta-section {
+      margin-top: 80px;
+      padding: 50px;
+      background: #00FFA8;
+      color: #000000;
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      color: #000000;
+      margin-top: 0;
+    }
+
+    .cta-section p {
+      color: #000000;
+      font-size: 18px;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .product-image-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+      border: 1px solid #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      color: #666666;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media print {
+      body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <div>
+    <div class="cover-logo">SYAALA</div>
+  </div>
+  <div class="cover-title">
+    <h1>A Future Built<br>in <span class="accent">Containers</span></h1>
+    <div class="cover-subtitle">Modular Data Infrastructure for the AI Era</div>
+  </div>
+  <div class="cover-footer">
+    <div>Product Brochure 2025</div>
+    <div>syaala.com</div>
+  </div>
+</div>
+
+<!-- PAGE 2: INTRODUCTION -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>The Infrastructure<br>Revolution</h2>
+    <div class="tagline">Building at the speed of change</div>
+  </div>
+
+  <p>Traditional data centers take 18-36 months to build. By the time they're operational, the technology they were designed for is already obsolete. The AI era demands something fundamentally different.</p>
+
+  <p>Syaala delivers fully-integrated, production-ready data infrastructure in shipping containers. Deploy in weeks, not years. Scale in modules, not buildings. Adapt in real-time, not architectural overhauls.</p>
+
+  <div class="highlight-box">
+    <p>"We don't build data centers. We manufacture computational ecosystems that arrive ready to power the future."</p>
+  </div>
+
+  <h3>Why Modular?</h3>
+
+  <p>Every component—compute, power, cooling, networking—is engineered as a self-contained pod. Shipped globally. Deployed on-site. Operational in days. This is infrastructure at industrial scale with software-like velocity.</p>
+
+  <div class="page-number">02</div>
+</div>
+
+<!-- PAGE 3: PRODUCT OVERVIEW -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>The Syaala<br>System</h2>
+    <div class="tagline">Four core products. Infinite configurations.</div>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-box">
+      <h4>Compute Pods</h4>
+      <p>High-density GPU/CPU servers in ruggedized 20ft/40ft containers. Air-gapped security. Liquid cooling ready. Field-proven from Arctic to equatorial deployments.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Power Pods</h4>
+      <p>Integrated electrical distribution with redundant UPS, transformers, and smart monitoring. Grid-connected or generator-backed. Scales from 500kW to 5MW per pod.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Cooling Pods</h4>
+      <p>Advanced thermal management supporting both air and liquid cooling. Adaptive climate control. Supports ambient temps from -40°C to +50°C with 99.99% uptime.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Modular Yards</h4>
+      <p>Pre-configured multi-pod deployments. Designed for rapid expansion. Includes all interconnects, security, and monitoring. From edge sites to hyperscale farms.</p>
+    </div>
+  </div>
+
+  <div class="page-number">03</div>
+</div>
+
+<!-- PAGE 4: COMPUTE PODS DEEP DIVE -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Compute Pods</h2>
+    <div class="tagline">Power where you need it</div>
+  </div>
+
+  <div class="product-image-placeholder">
+    [HIGH-DENSITY COMPUTE POD VISUALIZATION]
+  </div>
+
+  <h3>Technical Specifications</h3>
+
+  <ul class="spec-list">
+    <li><span class="spec-label">Container Size</span> <span class="spec-value">20ft / 40ft ISO</span></li>
+    <li><span class="spec-label">Rack Units</span> <span class="spec-value">Up to 24 racks (40ft)</span></li>
+    <li><span class="spec-label">Power Density</span> <span class="spec-value">Up to 200kW per rack</span></li>
+    <li><span class="spec-label">GPU Support</span> <span class="spec-value">NVIDIA H100/A100/L40S</span></li>
+    <li><span class="spec-label">Cooling</span> <span class="spec-value">Air / Liquid / Hybrid</span></li>
+    <li><span class="spec-label">Networking</span> <span class="spec-value">400GbE spine, RDMA ready</span></li>
+    <li><span class="spec-label">Deployment</span> <span class="spec-value">72 hours to operational</span></li>
+  </ul>
+
+  <div class="page-number">04</div>
+</div>
+
+<!-- PAGE 5: COMPUTE PODS FEATURES -->
+<div class="page content-page">
+  <h3>Built for AI Workloads</h3>
+
+  <p>Training LLMs demands computational density that traditional facilities can't match. Our compute pods deliver up to 4.8MW in a 40ft footprint—equivalent to a small data center, deployable anywhere in the world.</p>
+
+  <h4>Key Features</h4>
+
+  <div class="feature-grid">
+    <div class="feature-box">
+      <h4>Liquid Cooling Ready</h4>
+      <p>Direct-to-chip cooling for GPU clusters. Supports next-gen 1000W+ TDP chips. 40% more efficient than air cooling.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Security First</h4>
+      <p>Physical access controls, mesh networking, encrypted storage. Meets NIST 800-53, ISO 27001, SOC 2 requirements.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Hot-Swap Ready</h4>
+      <p>Component-level redundancy. Replace servers without downtime. Field-serviceable with modular PSUs and fans.</p>
+    </div>
+
+    <div class="feature-box">
+      <h4>Climate Agnostic</h4>
+      <p>Rated from -40°C to +50°C ambient. Operates in deserts, tundra, and everything between. No HVAC required.</p>
+    </div>
+  </div>
+
+  <div class="page-number">05</div>
+</div>
+
+<!-- PAGE 6: POWER PODS -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Power Pods</h2>
+    <div class="tagline">Energy infrastructure at scale</div>
+  </div>
+
+  <div class="product-image-placeholder">
+    [POWER DISTRIBUTION POD VISUALIZATION]
+  </div>
+
+  <h3>Technical Specifications</h3>
+
+  <ul class="spec-list">
+    <li><span class="spec-label">Container Size</span> <span class="spec-value">20ft / 40ft ISO</span></li>
+    <li><span class="spec-label">Power Capacity</span> <span class="spec-value">500kW - 5MW</span></li>
+    <li><span class="spec-label">Input Voltage</span> <span class="spec-value">480V 3-phase (configurable)</span></li>
+    <li><span class="spec-label">UPS Backup</span> <span class="spec-value">5-15 minutes full load</span></li>
+    <li><span class="spec-label">Redundancy</span> <span class="spec-value">N+1 / 2N configurable</span></li>
+    <li><span class="spec-label">Efficiency</span> <span class="spec-value">98.5% (Titanium rated)</span></li>
+    <li><span class="spec-label">Monitoring</span> <span class="spec-value">Real-time DCIM integration</span></li>
+  </ul>
+
+  <p style="margin-top: 40px;">Every power pod includes smart PDUs, circuit protection, surge suppression, and remote management. Designed to integrate with grid power, diesel generators, or renewable sources.</p>
+
+  <div class="page-number">06</div>
+</div>
+
+<!-- PAGE 7: COOLING PODS -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Cooling Pods</h2>
+    <div class="tagline">Thermal management perfected</div>
+  </div>
+
+  <div class="product-image-placeholder">
+    [COOLING SYSTEM POD VISUALIZATION]
+  </div>
+
+  <h3>Technical Specifications</h3>
+
+  <ul class="spec-list">
+    <li><span class="spec-label">Container Size</span> <span class="spec-value">20ft / 40ft ISO</span></li>
+    <li><span class="spec-label">Cooling Capacity</span> <span class="spec-value">Up to 2MW heat removal</span></li>
+    <li><span class="spec-label">Cooling Method</span> <span class="spec-value">Air / Liquid / Evaporative</span></li>
+    <li><span class="spec-label">Operating Temp</span> <span class="spec-value">-40°C to +50°C ambient</span></li>
+    <li><span class="spec-label">PUE</span> <span class="spec-value">1.15 - 1.30 typical</span></li>
+    <li><span class="spec-label">Water Usage</span> <span class="spec-value">Optional dry-cooling mode</span></li>
+    <li><span class="spec-label">Controls</span> <span class="spec-value">AI-driven thermal optimization</span></li>
+  </ul>
+
+  <p style="margin-top: 40px;">Adaptive cooling strategies automatically adjust to workload and ambient conditions. Supports both rear-door heat exchangers and direct liquid cooling for maximum flexibility.</p>
+
+  <div class="page-number">07</div>
+</div>
+
+<!-- PAGE 8: MODULAR YARDS -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Modular Yards</h2>
+    <div class="tagline">Complete data center deployments</div>
+  </div>
+
+  <p>A Syaala Yard is a pre-integrated collection of compute, power, and cooling pods designed for specific use cases. Think of it as a data center kit—everything you need, nothing you don't.</p>
+
+  <h3>Reference Configurations</h3>
+
+  <div class="feature-box" style="margin-top: 30px;">
+    <h4>Edge Yard (4 Pods)</h4>
+    <p>2x Compute + 1x Power + 1x Cooling</p>
+    <p>500kW total capacity. Perfect for regional AI inference, CDN nodes, or enterprise private cloud. Fits on a single flatbed truck.</p>
+  </div>
+
+  <div class="feature-box" style="margin-top: 30px;">
+    <h4>Training Yard (12 Pods)</h4>
+    <p>8x Compute + 2x Power + 2x Cooling</p>
+    <p>2.5MW GPU cluster. Designed for LLM training, research labs, and ML pipelines. Deploys in under 2 weeks.</p>
+  </div>
+
+  <div class="feature-box" style="margin-top: 30px;">
+    <h4>Hyperscale Yard (50+ Pods)</h4>
+    <p>Custom configurations for tier-1 workloads</p>
+    <p>10MW+ deployments. Full redundancy. Multi-zone architectures. The fastest path to hyperscale infrastructure.</p>
+  </div>
+
+  <div class="page-number">08</div>
+</div>
+
+<!-- PAGE 9: USE CASES -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Built For</h2>
+    <div class="tagline">Real deployments, real results</div>
+  </div>
+
+  <h3>AI Research Labs</h3>
+  <p>Deploy GPU clusters in weeks, not years. Scale from prototype to production without moving buildings. Reconfigure compute ratios as your models evolve.</p>
+
+  <h3>Energy Companies</h3>
+  <p>Co-locate with renewable generation sites. Turn stranded power into computational value. Deploy in remote locations traditional data centers can't reach.</p>
+
+  <h3>Defense & Government</h4>
+  <p>Air-gapped, secure-by-design infrastructure. Rapid deployment to austere environments. Meets NIST, ITAR, and DoD requirements out of the box.</p>
+
+  <h3>Financial Services</h3>
+  <p>Low-latency trading infrastructure deployed at the edge. Disaster recovery sites operational in days. Regulatory-compliant data sovereignty.</p>
+
+  <h3>Cloud Providers</h3>
+  <p>Expand regional presence without building new facilities. Offer sovereign cloud options. Deliver edge compute closer to end users.</p>
+
+  <div class="page-number">09</div>
+</div>
+
+<!-- PAGE 10: DEPLOYMENT PROCESS -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>How It Works</h2>
+    <div class="tagline">From order to operational in 8 weeks</div>
+  </div>
+
+  <h3>Week 1-2: Design & Configuration</h3>
+  <p>Work with our team to spec your exact requirements. Choose pod configurations, networking topology, and integration points. Receive detailed CAD layouts and power projections.</p>
+
+  <h3>Week 3-6: Manufacturing</h3>
+  <p>Pods are built, tested, and validated at our facilities. Every unit undergoes burn-in testing at full load. Hardware is installed, configured, and documented.</p>
+
+  <h3>Week 7: Shipping & Site Prep</h3>
+  <p>Containers ship globally via standard freight. While in transit, your site team prepares power feeds and network drops using our provided specifications.</p>
+
+  <h3>Week 8: Deployment</h3>
+  <p>Pods arrive on-site. Our field team connects power, cooling, and networking. Systems are validated and handed over production-ready.</p>
+
+  <div class="highlight-box">
+    <p>From signed contract to operational infrastructure in 8 weeks. Traditional data centers take 24 months.</p>
+  </div>
+
+  <div class="page-number">10</div>
+</div>
+
+<!-- PAGE 11: SUSTAINABILITY -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Sustainable<br>by Design</h2>
+    <div class="tagline">Efficiency at every layer</div>
+  </div>
+
+  <h3>Energy Efficiency</h3>
+  <p>Our pods achieve PUE ratings of 1.15-1.30, significantly better than the industry average of 1.58. Advanced cooling strategies, high-efficiency power distribution, and intelligent workload management minimize waste.</p>
+
+  <h3>Renewable Integration</h3>
+  <p>Designed to operate on renewable power sources. No dependence on grid infrastructure. Co-locate with solar, wind, or hydro generation. Intermittent power? Our UPS and thermal mass provide buffering.</p>
+
+  <h3>Material Lifecycle</h3>
+  <p>Containers are reusable and relocatable. Decommissioned hardware is refurbished or recycled. No concrete buildings left behind when technology changes.</p>
+
+  <h3>Water Conservation</h3>
+  <p>Dry-cooling options eliminate water consumption entirely. In water-rich environments, closed-loop systems minimize usage to <1 liter per kWh.</p>
+
+  <div class="page-number">11</div>
+</div>
+
+<!-- PAGE 12: PRICING & MODELS -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>How to Buy</h2>
+    <div class="tagline">Flexible models for every need</div>
+  </div>
+
+  <h3>Purchase</h3>
+  <p>Buy pods outright. Full ownership, customization, and control. Ideal for long-term deployments or organizations with capital budgets.</p>
+  <p style="margin-bottom: 40px;"><strong>Starting at $1.2M per 20ft compute pod (fully configured)</strong></p>
+
+  <h3>Lease</h3>
+  <p>12-60 month terms. Predictable OpEx. Upgrade paths built-in. Perfect for project-based deployments or capacity planning uncertainty.</p>
+  <p style="margin-bottom: 40px;"><strong>Starting at $25K/month per pod</strong></p>
+
+  <h3>Infrastructure-as-a-Service</h3>
+  <p>We deploy, operate, and maintain the infrastructure. You consume compute, storage, and networking on-demand. All the benefits of modular architecture without operational overhead.</p>
+  <p style="margin-bottom: 40px;"><strong>Custom pricing based on SLAs and scale</strong></p>
+
+  <div class="highlight-box">
+    <p>Volume discounts, multi-year agreements, and custom financing available. Contact our team for a detailed quote tailored to your requirements.</p>
+  </div>
+
+  <div class="page-number">12</div>
+</div>
+
+<!-- PAGE 13: CONTACT & CTA -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Let's Build<br>Your Future</h2>
+    <div class="tagline">Infrastructure at the speed of innovation</div>
+  </div>
+
+  <p>The AI era demands infrastructure that moves as fast as the technology it powers. Syaala delivers production-ready data centers in shipping containers—deployed in weeks, scaled in modules, adapted in real-time.</p>
+
+  <p>Whether you're training the next generation of AI models, building sovereign cloud infrastructure, or expanding your computational capacity, we have a solution that fits.</p>
+
+  <div class="cta-section">
+    <h3>Ready to Deploy?</h3>
+    <p>Schedule a consultation with our infrastructure team.</p>
+    <div class="contact-info">
+      <p>📧 sales@syaala.com</p>
+      <p>🌐 syaala.com</p>
+      <p>📞 +1 (555) SYAALA-1</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #2a2a2a; text-align: center; color: #666666; font-size: 12px;">
+    <p>SYAALA MODULAR INFRASTRUCTURE</p>
+    <p style="margin-top: 10px;">© 2025 Syaala. All rights reserved. Specifications subject to change.</p>
+  </div>
+
+  <div class="page-number">13</div>
+</div>
+
+</body>
+</html>

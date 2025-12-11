@@ -1,0 +1,340 @@
+GAMMA PRESENTATION PROMPT - SYAALA MODULAR DATA INFRASTRUCTURE
+
+Create a premium B2B marketing presentation/brochure for Syaala's modular data center business with the following specifications:
+
+═══════════════════════════════════════════════════════════════════
+
+BRAND IDENTITY & DESIGN PHILOSOPHY
+───────────────────────────────────────────────────────────────────
+
+Aesthetic: Modern, organic, cinematic premium B2B
+Color Palette:
+- Primary: Deep blacks (#000000, #0A0A0A) with subtle gradients
+- Accent 1: Light orange/amber (#FF9D5C, #FFA366) for heat/power themes
+- Accent 2: Light blue/cyan (#5CC8FF, #66D9FF) for cooling themes
+- Accent 3: Neon green (#00FFA8) for CTAs and highlights
+- Neutrals: Warm grays (#888888, #CCCCCC) for body text
+
+Typography:
+- Headlines: Inter Black/Extra Bold, large, commanding
+- Body: Inter Regular/Medium, highly readable
+- Avoid all-caps except for small labels
+
+Design Treatment:
+- NO harsh lines, boxes, or rigid grids
+- USE organic curves, flowing shapes, soft gradients
+- EMBRACE asymmetry and dynamic layouts
+- Images should bleed into content with curved masks/organic cutouts
+- Subtle glass morphism and depth with shadows
+- Premium white space - never cramped
+- Cinematic 16:9 wide layouts
+
+═══════════════════════════════════════════════════════════════════
+
+CONTENT STRUCTURE (13 SLIDES)
+───────────────────────────────────────────────────────────────────
+
+SLIDE 1: COVER
+──────────────
+Title: "A Future Built in Containers"
+Subtitle: "Modular Data Infrastructure for the AI Era"
+Visual: Abstract hero image - shipping containers in cinematic lighting, dark moody background with orange accent lighting suggesting heat/energy
+Treatment: Large bold title overlaying image with curved text flow, Syaala logo in corner
+Mood: Epic, forward-thinking, industrial elegance
+
+
+SLIDE 2: THE PROBLEM
+────────────────────
+Headline: "The Infrastructure Crisis"
+Key Points:
+• Traditional data centers take 18-36 months to build
+• Technology is obsolete by the time facilities are operational
+• The AI era demands infrastructure that moves at software speed
+• $200B+ wasted annually on slow, inflexible infrastructure
+
+Visual: Split diagonal composition - left side shows traditional construction (cranes, concrete), right side shows modern AI chips/GPUs with light blue cooling glow
+Treatment: Organic diagonal divide with gradient blur, warm orange on traditional side, cool blue on modern side
+Tone: Urgent problem that resonates with CTOs and infrastructure leaders
+
+
+SLIDE 3: THE SYAALA SOLUTION
+─────────────────────────────
+Headline: "Deploy in Weeks, Not Years"
+Subhead: "Production-ready data infrastructure in shipping containers"
+
+Key Message:
+"We don't build data centers. We manufacture computational ecosystems that arrive ready to power the future."
+
+Visual: Beautiful 3D render or photo of sleek Syaala container pod - black matte finish, orange accent lighting along edges, billowing cool air/mist from vents (light blue glow)
+Treatment: Container image with curved mask bleeding into dark gradient background, floating with subtle shadow
+Impact: Premium product reveal, Apple-style minimalism
+
+
+SLIDE 4: SYSTEM OVERVIEW
+─────────────────────────
+Headline: "Four Products. Infinite Configurations."
+
+Grid Layout (2x2 with organic rounded cards):
+
+┌─────────────────────┬─────────────────────┐
+│  COMPUTE PODS       │  POWER PODS         │
+│  (orange accents)   │  (orange accents)   │
+│  High-density GPU   │  500kW - 5MW        │
+│  Icon: Chip         │  Icon: Lightning    │
+└─────────────────────┴─────────────────────┘
+┌─────────────────────┬─────────────────────┐
+│  COOLING PODS       │  MODULAR YARDS      │
+│  (blue accents)     │  (green accents)    │
+│  Advanced thermal   │  Complete turnkey   │
+│  Icon: Snowflake    │  Icon: Grid         │
+└─────────────────────┴─────────────────────┘
+
+Treatment: Soft gradient cards with icons, organic rounded corners, subtle glow effects
+Each card has background imagery hinting at function (circuit patterns for compute, coolant flow for cooling)
+
+
+SLIDE 5: COMPUTE PODS - HERO
+─────────────────────────────
+Headline: "Computational Density Redefined"
+Tagline: "Power where you need it"
+
+Visual: Dramatic wide shot of compute pod interior - rows of GPU servers with orange LED indicators, depth of field blur, cinematic industrial lighting
+Treatment: Image bleeds across 70% of slide with curved organic mask on right, specs overlay on dark gradient
+
+Key Specs (floating cards):
+• Up to 24 racks per 40ft pod
+• 200kW per rack power density
+• NVIDIA H100/A100 GPU support
+• Liquid cooling ready
+• 72 hours to operational
+
+Mood: Raw power, serious engineering, heat and energy
+
+
+SLIDE 6: COMPUTE PODS - FEATURES
+─────────────────────────────────
+Headline: "Built for AI Workloads"
+
+Visual: Close-up macro shot of liquid cooling system with blue coolant flowing through clear tubes attached to GPU die, glowing components
+Treatment: Hero image on left with organic curved edge, feature cards stacked on right
+
+Feature Cards (organic shapes with icons):
+→ Liquid Cooling: Direct-to-chip, 40% more efficient
+→ Security First: Air-gapped, NIST compliant, SOC 2
+→ Hot-Swap Ready: Zero-downtime component replacement
+→ Climate Agnostic: -40°C to +50°C operation
+
+Design: Each feature has subtle orange or blue glow based on thermal association
+
+
+SLIDE 7: POWER PODS
+───────────────────
+Headline: "Energy Infrastructure at Scale"
+Tagline: "Pure, reliable, intelligent power"
+
+Visual: Abstract visualization of electrical distribution - glowing orange energy flow lines, circuit breaker arrays, transformer coils with dramatic lighting
+Treatment: Full-bleed background with floating spec overlay in frosted glass cards
+
+Specs:
+• 500kW - 5MW capacity
+• 98.5% efficiency (Titanium rated)
+• N+1 / 2N redundancy
+• Smart DCIM integration
+• Grid, generator, or renewable ready
+
+Accent Color: Warm orange/amber throughout to represent energy/heat
+Mood: Reliable power backbone
+
+
+SLIDE 8: COOLING PODS
+─────────────────────
+Headline: "Thermal Mastery"
+Tagline: "From Arctic to Equator"
+
+Visual: Ethereal shot of cooling system - blue-lit coolant flowing, condensation droplets, cold air vapor/mist, frost on pipes
+Treatment: Cool blue color grading, organic shapes, flowing curves suggesting liquid movement
+
+Key Stats (curved overlay cards):
+• Up to 2MW heat removal
+• PUE 1.15-1.30
+• -40°C to +50°C ambient operation
+• AI-driven thermal optimization
+• Optional dry-cooling (zero water)
+
+Design: Everything bathed in cool blue light, ice/water motifs, smooth flowing shapes
+Mood: Precision cooling, scientific elegance
+
+
+SLIDE 9: MODULAR YARDS
+──────────────────────
+Headline: "Complete Data Centers, Delivered"
+Tagline: "Pre-integrated. Production-ready. Deployed in days."
+
+Visual: Aerial drone shot of modular yard - multiple container pods arranged in modern configuration, orange accent lighting, blue cooling vapor rising, industrial yard at sunset/golden hour
+Treatment: Wide cinematic image with curved bottom edge, floating info cards above
+
+Reference Configurations (organic cards):
+┌──────────────┐
+│ EDGE YARD    │ 500kW | 4 pods | Regional deployment
+└──────────────┘
+┌──────────────┐
+│ TRAINING     │ 2.5MW | 12 pods | LLM clusters
+│ YARD         │
+└──────────────┘
+┌──────────────┐
+│ HYPERSCALE   │ 10MW+ | 50+ pods | Tier-1 workloads
+│ YARD         │
+└──────────────┘
+
+Mood: Scale, flexibility, turnkey solutions
+
+
+SLIDE 10: USE CASES
+───────────────────
+Headline: "Built For Innovators"
+
+Layout: Five curved sections flowing vertically like a timeline
+
+AI RESEARCH LABS
+→ Deploy GPU clusters in weeks, scale without limits
+Visual: Neural network visualization, orange nodes
+
+ENERGY COMPANIES
+→ Co-locate with renewable generation sites
+Visual: Solar panels, wind turbines with blue sky
+
+DEFENSE & GOVERNMENT
+→ Secure, air-gapped, rapid deployment
+Visual: Military aesthetic, dark tones
+
+FINANCIAL SERVICES
+→ Low-latency edge infrastructure
+Visual: Trading floor, data streams in blue
+
+CLOUD PROVIDERS
+→ Regional expansion without new facilities
+Visual: Global network map with green connection lines
+
+Design: Organic flowing sections, each with subtle gradient and thematic imagery
+
+
+SLIDE 11: DEPLOYMENT TIMELINE
+─────────────────────────────
+Headline: "8 Weeks. Order to Operational."
+Subhead: "Traditional data centers: 24 months"
+
+Visual: Flowing timeline visualization with organic curves (not rigid lines)
+
+Week 1-2: DESIGN & CONFIG
+→ Curved section with blueprint/CAD imagery
+
+Week 3-6: MANUFACTURING
+→ Factory floor, container assembly, warm orange lighting
+
+Week 7: SHIPPING & SITE PREP
+→ Container ship / freight, global logistics
+
+Week 8: DEPLOYMENT
+→ On-site installation, live data center, green "operational" glow
+
+Treatment: Timeline flows like a river from left to right, each phase connected by organic curves
+Colors: Progress from orange (planning/manufacturing) to blue (cooling/deployment) to green (operational)
+
+
+SLIDE 12: SUSTAINABILITY
+────────────────────────
+Headline: "Sustainable by Design"
+Tagline: "Efficiency at every layer"
+
+Visual: Nature meets technology - green leaves/forest with modern container pod integrated organically, sunlight filtering through
+Treatment: Blend natural imagery with industrial design using organic masks
+
+Key Points (floating organic bubbles):
+○ PUE 1.15-1.30 (industry avg: 1.58)
+○ Renewable integration: solar, wind, hydro ready
+○ Reusable & relocatable infrastructure
+○ Optional dry-cooling: <1L water per kWh
+
+Design: Earth tones, green accents, natural textures blended with tech
+Mood: Responsible innovation, future-forward sustainability
+
+
+SLIDE 13: CALL TO ACTION
+─────────────────────────
+Headline: "Let's Build Your Future"
+Tagline: "Infrastructure at the speed of innovation"
+
+Message:
+"Whether you're training next-gen AI models, building sovereign cloud infrastructure, or expanding computational capacity—we have a solution that fits."
+
+CTA Button (large, organic rounded shape):
+"SCHEDULE A CONSULTATION"
+
+Contact Info (minimal, elegant):
+sales@syaala.com
+syaala.com
++1 (555) SYAALA-1
+
+Visual: Abstract future-forward imagery - glowing network connections, data streams, containers integrated into futuristic setting
+Treatment: Dark gradient background with neon green accent highlights, premium end slide
+Mood: Confident, ready to engage, premium close
+
+═══════════════════════════════════════════════════════════════════
+
+DESIGN EXECUTION NOTES FOR GAMMA
+───────────────────────────────────────────────────────────────────
+
+1. IMAGE TREATMENT:
+   - All AI-generated images should use organic curved masks
+   - Blend images into gradients, never hard edges
+   - Use jagged/rough image edges intentionally as design element
+   - Apply subtle blur gradients at image boundaries
+   - Layer images with transparency for depth
+
+2. COLOR TEMPERATURE:
+   - Compute/Power slides: Warm (orange #FF9D5C, amber)
+   - Cooling slides: Cool (light blue #5CC8FF, cyan)
+   - CTA/Highlights: Neon green #00FFA8
+   - Base: Deep blacks with warm gray text
+
+3. TYPOGRAPHY:
+   - Headlines: 60-120pt, bold, dramatic
+   - Subheads: 24-36pt, medium weight
+   - Body: 16-20pt, regular, high line-spacing
+   - Never use rigid alignment - embrace organic flow
+
+4. MOTION (if animated):
+   - Smooth parallax scrolling
+   - Fade-in with subtle upward drift
+   - Glow pulse effects on accent elements
+   - Avoid sharp cuts - use gradient transitions
+
+5. PREMIUM TOUCHES:
+   - Glass morphism cards (frosted background, subtle blur)
+   - Soft drop shadows for depth (not harsh)
+   - Gradient overlays on images for text legibility
+   - Subtle grain texture for cinematic feel
+   - Generous white space - premium spacing
+
+═══════════════════════════════════════════════════════════════════
+
+GAMMA-SPECIFIC INSTRUCTIONS
+───────────────────────────────────────────────────────────────────
+
+When creating in Gamma:
+1. Select "Creative/Marketing" theme
+2. Choose dark/premium color scheme
+3. Request "organic, flowing design with soft curves"
+4. Specify "cinematic B2B product launch aesthetic"
+5. Use "asymmetric layouts" and "dynamic compositions"
+6. Request "premium white space and generous padding"
+7. For images: "blend with organic curves, no hard edges"
+
+Target Audience: CTOs, Infrastructure VPs, Data Center Operators, AI Research Labs
+Goal: Premium product reveal that communicates speed, power, and innovation
+Tone: Confident, forward-thinking, premium industrial design
+
+═══════════════════════════════════════════════════════════════════
+
+Copy this entire prompt into Gamma and specify:
+"Create a 13-slide B2B marketing presentation following this exact structure and design philosophy. Use organic curves, premium dark aesthetic with light orange and light blue accents. No harsh lines or rigid layouts."

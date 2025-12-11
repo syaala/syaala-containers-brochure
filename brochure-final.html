@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syaala - A Future Built in Containers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #000000;
+      color: #FFFFFF;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .slide {
+      width: 297mm;
+      height: 210mm;
+      padding: 0;
+      margin: 0 auto;
+      background: #000000;
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Subtle organic accents */
+    .organic-blob {
+      position: absolute;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      filter: blur(120px);
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    .blob-orange {
+      background: #FF9D5C;
+    }
+
+    .blob-blue {
+      background: #5CC8FF;
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: 70px 90px;
+    }
+
+    /* Typography - cleaner */
+    h1 {
+      font-size: 88px;
+      font-weight: 900;
+      letter-spacing: -4px;
+      line-height: 1;
+      margin-bottom: 30px;
+      color: #FFFFFF;
+    }
+
+    h2 {
+      font-size: 58px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      color: #FFFFFF;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 15px;
+      color: #FFFFFF;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      font-weight: 300;
+      color: #666666;
+      letter-spacing: 0.3px;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #888888;
+    }
+
+    /* Logo */
+    .logo-img {
+      position: absolute;
+      top: 50px;
+      left: 70px;
+      height: 60px;
+      z-index: 10;
+      filter: brightness(1);
+    }
+
+    /* Images with organic masks */
+    .hero-image {
+      position: absolute;
+      width: 55%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      object-fit: cover;
+      clip-path: ellipse(70% 100% at 100% 50%);
+      opacity: 0.9;
+    }
+
+    .full-bleed-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+
+    .curved-image-left {
+      position: absolute;
+      width: 60%;
+      height: 80%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      object-fit: cover;
+      clip-path: ellipse(70% 100% at 0% 50%);
+    }
+
+    .curved-image-right {
+      position: absolute;
+      width: 50%;
+      height: 75%;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      object-fit: cover;
+      clip-path: ellipse(65% 100% at 100% 50%);
+    }
+
+    .diagonal-image {
+      position: absolute;
+      width: 100%;
+      height: 55%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+
+    /* Detail accent images */
+    .accent-detail {
+      position: absolute;
+      width: 320px;
+      height: 200px;
+      object-fit: cover;
+      opacity: 0.15;
+      border-radius: 20px;
+      filter: grayscale(0.3);
+    }
+
+    /* Clean cards */
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .card h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #666666;
+    }
+
+    /* Minimal spec list */
+    .spec {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 15px;
+      color: #888888;
+    }
+
+    .spec:last-child {
+      border-bottom: none;
+    }
+
+    .spec strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Grid layouts - cleaner */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      gap: 20px;
+      margin-top: 60px;
+    }
+
+    .timeline-item {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      padding: 24px;
+      border-top: 2px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .timeline-item h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item h3 {
+      font-size: 17px;
+      margin: 8px 0;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    /* Use cases */
+    .use-case {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      padding: 22px 28px;
+      border-left: 2px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 15px;
+    }
+
+    .use-case h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #FFFFFF;
+    }
+
+    .use-case p {
+      font-size: 15px;
+      color: #666666;
+    }
+
+    /* CTA */
+    .cta-button {
+      background: #FFFFFF;
+      color: #000000;
+      padding: 20px 55px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 60px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .contact-item {
+      font-size: 18px;
+      font-weight: 500;
+      color: #666666;
+    }
+
+    @media print {
+      body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide">
+  <img src="images/slide-01-hero.png" class="hero-image" alt="">
+  <div class="organic-blob blob-orange" style="width: 500px; height: 500px; top: -100px; right: -100px;"></div>
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <div style="max-width: 650px; margin-top: 120px;">
+      <h1>A Future Built<br>in Containers</h1>
+      <div class="subtitle">Modular data infrastructure for the AI era</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: PROBLEM -->
+<div class="slide">
+  <img src="images/slide-02-crisis.png" class="full-bleed-image" alt="">
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <div style="max-width: 900px;">
+      <h2>The Infrastructure Crisis</h2>
+      <p style="font-size: 20px; margin: 30px 0 50px 0; max-width: 700px; color: #AAAAAA;">
+        Traditional data centers take 18-36 months to build. By the time they're operational, the technology is already obsolete.
+      </p>
+
+      <div class="grid-2" style="margin-top: 60px;">
+        <div>
+          <div class="spec">Technology obsolete by completion</div>
+          <div class="spec">$200B+ wasted annually on inflexibility</div>
+        </div>
+        <div>
+          <div class="spec">18-36 month deployment timelines</div>
+          <div class="spec">AI era demands software-speed infrastructure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: SOLUTION -->
+<div class="slide">
+  <img src="images/slide-03-container-pod.png" class="curved-image-right" alt="">
+  <div class="organic-blob blob-blue" style="width: 600px; height: 600px; bottom: -150px; left: -150px;"></div>
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <div style="max-width: 580px;">
+      <h2>Deploy in Weeks,<br>Not Years</h2>
+      <p style="font-size: 19px; margin: 25px 0 50px 0; color: #888888;">
+        Production-ready data infrastructure in shipping containers. Deployed globally. Operational in days.
+      </p>
+
+      <div class="card" style="border-left: 2px solid rgba(255, 255, 255, 0.15);">
+        <p style="font-size: 20px; line-height: 1.5; color: #CCCCCC;">
+          "We don't build data centers. We manufacture computational ecosystems that arrive ready to power the future."
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: PRODUCTS -->
+<div class="slide">
+  <div class="organic-blob blob-orange" style="width: 450px; height: 450px; top: 100px; left: 100px;"></div>
+  <div class="organic-blob blob-blue" style="width: 450px; height: 450px; bottom: 100px; right: 100px;"></div>
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <h2 style="margin-bottom: 50px;">Four Products. Infinite Configurations.</h2>
+
+    <div class="grid-4">
+      <div class="card">
+        <h4>Compute Pods</h4>
+        <p>High-density GPU servers in ruggedized containers</p>
+      </div>
+      <div class="card">
+        <h4>Power Pods</h4>
+        <p>500kW - 5MW integrated distribution</p>
+      </div>
+      <div class="card">
+        <h4>Cooling Pods</h4>
+        <p>Advanced thermal management systems</p>
+      </div>
+      <div class="card">
+        <h4>Storage Pods</h4>
+        <p>Petabyte-scale arrays</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: COMPUTE HERO -->
+<div class="slide">
+  <img src="images/slide-05-compute-interior.png" class="curved-image-left" alt="">
+  <img src="images/nvidiagpu.png" class="accent-detail" style="bottom: 80px; right: 100px; opacity: 0.12;" alt="">
+
+  <div class="content" style="display: flex; justify-content: flex-end;">
+    <div style="max-width: 500px; text-align: right;">
+      <h2 style="text-align: right;">Computational Density Redefined</h2>
+      <p style="font-size: 17px; margin: 20px 0 45px 0; text-align: right; color: #888888;">
+        Power where you need it
+      </p>
+
+      <div style="text-align: left;">
+        <div class="spec"><strong>Up to 24 racks</strong> per 40ft pod</div>
+        <div class="spec"><strong>200kW per rack</strong> power density</div>
+        <div class="spec"><strong>NVIDIA H100/A100</strong> GPU support</div>
+        <div class="spec"><strong>Liquid cooling ready</strong> for next-gen chips</div>
+        <div class="spec"><strong>72 hours</strong> to operational</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: COMPUTE FEATURES -->
+<div class="slide">
+  <img src="images/slide-06-liquid-cooling.png" class="curved-image-right" alt="">
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <div style="max-width: 600px;">
+      <h2>Built for AI Workloads</h2>
+
+      <div style="margin-top: 50px;">
+        <div class="card" style="margin-bottom: 20px;">
+          <h4>Liquid Cooling</h4>
+          <p>Direct-to-chip, 40% more efficient than air</p>
+        </div>
+        <div class="card" style="margin-bottom: 20px;">
+          <h4>Security First</h4>
+          <p>Air-gapped, NIST compliant, SOC 2 certified</p>
+        </div>
+        <div class="card" style="margin-bottom: 20px;">
+          <h4>Hot-Swap Ready</h4>
+          <p>Zero-downtime component replacement</p>
+        </div>
+        <div class="card">
+          <h4>Climate Agnostic</h4>
+          <p>-40°C to +50°C ambient operation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: POWER -->
+<div class="slide">
+  <img src="images/slide-07-power-energy.png" class="full-bleed-image" alt="">
+
+  <div class="content" style="align-items: center; justify-content: center; display: flex;">
+    <div style="text-align: center; max-width: 900px;">
+      <h2>Energy Infrastructure at Scale</h2>
+      <p style="font-size: 18px; margin: 20px 0 60px 0; color: #888888;">Pure, reliable, intelligent power</p>
+
+      <div class="grid-3">
+        <div class="card" style="text-align: center;">
+          <h3 style="font-size: 42px; margin-bottom: 12px;">5MW</h3>
+          <p>Maximum capacity</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="font-size: 42px; margin-bottom: 12px;">98.5%</h3>
+          <p>Efficiency rated</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="font-size: 42px; margin-bottom: 12px;">N+1</h3>
+          <p>Redundancy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: COOLING -->
+<div class="slide">
+  <img src="images/slide-08-cooling-system.png" class="full-bleed-image" alt="">
+
+  <div class="content" style="align-items: center; justify-content: center; display: flex;">
+    <div style="text-align: center; max-width: 900px;">
+      <h2>Thermal Mastery</h2>
+      <p style="font-size: 18px; margin: 20px 0 60px 0; color: #888888;">From Arctic to Equator</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>2MW Heat Removal</h4>
+          <p>Per cooling pod capacity</p>
+        </div>
+        <div class="card">
+          <h4>PUE 1.15-1.30</h4>
+          <p>Industry average: 1.58</p>
+        </div>
+        <div class="card">
+          <h4>-40°C to +50°C</h4>
+          <p>Ambient operation range</p>
+        </div>
+        <div class="card">
+          <h4>Zero Water Option</h4>
+          <p>Dry-cooling available</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: MODULAR YARDS -->
+<div class="slide">
+  <img src="images/slide-09-modular-yard.png" class="diagonal-image" alt="">
+  <img src="images/cablemanagement.png" class="accent-detail" style="bottom: 70px; left: 80px; opacity: 0.1;" alt="">
+
+  <div class="content" style="align-items: flex-end; justify-content: flex-end; display: flex;">
+    <div style="max-width: 100%;">
+      <h2>Modular Data Yards</h2>
+      <p style="font-size: 17px; margin: 15px 0 45px 0; color: #888888;">Mix and match pods for your exact needs</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Edge Yard</h4>
+          <p>500kW • 4 pods<br>Regional deployment</p>
+        </div>
+        <div class="card">
+          <h4>Training Yard</h4>
+          <p>2.5MW • 12 pods<br>LLM clusters</p>
+        </div>
+        <div class="card">
+          <h4>Hyperscale Yard</h4>
+          <p>10MW+ • 50+ pods<br>Tier-1 workloads</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: USE CASES -->
+<div class="slide">
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <h2 style="margin-bottom: 45px;">Built For Innovators</h2>
+
+    <div style="max-width: 950px;">
+      <div class="use-case">
+        <h4>AI Research Labs</h4>
+        <p>Deploy GPU clusters in weeks, scale without limits</p>
+      </div>
+      <div class="use-case">
+        <h4>Energy Companies</h4>
+        <p>Co-locate with renewable generation sites</p>
+      </div>
+      <div class="use-case">
+        <h4>Defense & Government</h4>
+        <p>Secure, air-gapped, rapid deployment</p>
+      </div>
+      <div class="use-case">
+        <h4>Financial Services</h4>
+        <p>Low-latency edge infrastructure</p>
+      </div>
+      <div class="use-case">
+        <h4>Cloud Providers</h4>
+        <p>Regional expansion without new facilities</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11: TIMELINE -->
+<div class="slide">
+  <img src="images/controlroom.png" class="accent-detail" style="top: 90px; right: 90px; opacity: 0.08;" alt="">
+
+  <div class="content">
+    <img src="images/logo.png" class="logo-img" alt="Syaala">
+    <div style="text-align: center;">
+      <h2>8 Weeks. Order to Operational.</h2>
+      <p style="font-size: 18px; color: #666666; margin-top: 12px;">Traditional data centers: 24 months</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Week 1-2</h4>
+        <h3>Design & Config</h3>
+        <p>CAD layouts, power specs, network topology</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Week 3-6</h4>
+        <h3>Manufacturing</h3>
+        <p>Build, test, validate at full load</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Week 7</h4>
+        <h3>Shipping</h3>
+        <p>Global freight, site preparation</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Week 8</h4>
+        <h3>Deployment</h3>
+        <p>On-site install, validation, handover</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 12: CTA -->
+<div class="slide">
+  <img src="images/slide-13-future-networ.png" class="full-bleed-image" style="opacity: 0.15;" alt="">
+
+  <div class="content" style="align-items: center; justify-content: center; display: flex; text-align: center;">
+    <div style="max-width: 850px;">
+      <h2>Let's Build Your Future</h2>
+      <p style="font-size: 18px; margin: 20px 0 50px 0; color: #888888;">Infrastructure at the speed of innovation</p>
+
+      <p style="font-size: 20px; max-width: 750px; margin: 0 auto 50px auto; color: #AAAAAA; line-height: 1.6;">
+        Whether you're training next-gen AI models, building sovereign cloud infrastructure, or expanding computational capacity—we have a solution that fits.
+      </p>
+
+      <button class="cta-button">SCHEDULE A CONSULTATION</button>
+
+      <div class="contact-grid">
+        <div class="contact-item">sales@syaala.com</div>
+        <div class="contact-item">syaala.com</div>
+        <div class="contact-item">+1 (555) SYAALA-1</div>
+      </div>
+
+      <p style="font-size: 13px; color: #444444; margin-top: 70px;">
+        © 2025 Syaala. Modular Infrastructure for the AI Era.
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
