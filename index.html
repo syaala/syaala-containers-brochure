@@ -30,12 +30,16 @@
     .slide {
       width: 297mm;
       height: 210mm;
+      min-height: 210mm;
+      max-height: 210mm;
       padding: 0;
       margin: 0 auto;
       background: #000000;
       position: relative;
       page-break-after: always;
+      page-break-inside: avoid;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     .logo {
@@ -245,9 +249,56 @@
     }
 
     @media print {
-      body {
+      * {
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .slide {
+        width: 297mm;
+        height: 210mm;
+        min-height: 210mm;
+        max-height: 210mm;
+        margin: 0;
+        padding: 0;
+        page-break-after: always;
+        page-break-inside: avoid;
+        break-after: page;
+        break-inside: avoid;
+        overflow: hidden;
+      }
+
+      .slide:last-child {
+        page-break-after: auto;
+      }
+
+      .content-area {
+        /* Add safe margins for print to prevent cutoff */
+        padding: 60px 70px;
+      }
+
+      .logo {
+        /* Ensure logo stays within safe print area */
+        top: 50px;
+        left: 70px;
+      }
+
+      /* Prevent orphaned content */
+      h1, h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      .card, .comparison-row, .spec {
+        page-break-inside: avoid;
+        break-inside: avoid;
       }
     }
 
@@ -673,7 +724,65 @@
   </div>
 </div>
 
-<!-- SLIDE 7: WHO USES SYAALA -->
+<!-- SLIDE 7: SMART INFRASTRUCTURE -->
+<div class="slide">
+  <div class="organic-image-container" style="
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 70%;
+    border-radius: 0% 50% 50% 0% / 0% 40% 60% 0%;
+    overflow: hidden;
+    opacity: 0.5;
+  ">
+    <img src="images/slide-05-compute-interior.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+  </div>
+
+  <div class="content-area" style="right: 0; top: 50%; transform: translateY(-50%); width: 60%;">
+    <h2 style="font-size: 52px; margin-bottom: 18px;">Smart Infrastructure<br>Built In</h2>
+    <p style="font-size: 17px; margin: 0 0 40px 0; color: #AAAAAA; max-width: 600px;">
+      Syaala pods don't just deploy fast—they continuously optimize operating cost from day one.
+    </p>
+
+    <div style="max-width: 620px;">
+      <div class="card" style="margin-bottom: 18px; padding: 24px;">
+        <p style="font-size: 15px; color: #888888; line-height: 1.65; margin: 0;">
+          Each pod is built with embedded electrical and energy intelligence providing real-time visibility down to the rack and circuit level. Power usage, thermal behavior, and load patterns are continuously monitored and analyzed.
+        </p>
+      </div>
+
+      <div class="grid-2" style="gap: 18px;">
+        <div class="card" style="padding: 22px;">
+          <h4 style="font-size: 12px;">Power Intelligence</h4>
+          <p style="font-size: 14px;">Rack- and circuit-level power monitoring for granular visibility and control.</p>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <h4 style="font-size: 12px;">AI-Assisted Optimization</h4>
+          <p style="font-size: 14px;">Dynamic load balancing and adaptive cooling based on live workload behavior.</p>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <h4 style="font-size: 12px;">Predictive Maintenance</h4>
+          <p style="font-size: 14px;">Fault detection for breakers, cooling, and electrical components before they impact uptime.</p>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <h4 style="font-size: 12px;">Energy Cost Reduction</h4>
+          <p style="font-size: 14px;">Continuous optimization and demand response readiness to reduce utility costs year over year.</p>
+        </div>
+      </div>
+
+      <p style="font-size: 15px; margin-top: 35px; color: #AAAAAA; font-weight: 600;">
+        Infrastructure that learns, adapts, and reduces cost over time. Save millions in operational expenses.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: WHO USES SYAALA -->
 <div class="slide">
   <div class="content-area" style="top: 50%; transform: translateY(-50%); width: 100%;">
     <h2 style="margin-bottom: 45px;">Who Uses Syaala</h2>
@@ -712,7 +821,7 @@
   </div>
 </div>
 
-<!-- SLIDE 8: MODULAR YARDS -->
+<!-- SLIDE 9: MODULAR YARDS -->
 <div class="slide">
   <div class="organic-image-container" style="
     position: absolute;
@@ -766,7 +875,7 @@
   </div>
 </div>
 
-<!-- SLIDE 9: FACTORY & ISO QUALITY -->
+<!-- SLIDE 10: FACTORY & ISO QUALITY -->
 <div class="slide">
   <div class="organic-image-container" style="
     position: absolute;
@@ -809,7 +918,7 @@
   </div>
 </div>
 
-<!-- SLIDE 10: ENERGY EFFICIENCY & PUE -->
+<!-- SLIDE 11: ENERGY EFFICIENCY & PUE -->
 <div class="slide">
   <div class="organic-image-container" style="
     position: absolute;
@@ -862,7 +971,7 @@
   </div>
 </div>
 
-<!-- SLIDE 11: CTA -->
+<!-- SLIDE 12: CTA -->
 <div class="slide">
   <div class="organic-image-container" style="
     position: absolute;
@@ -892,14 +1001,17 @@
       Modular data centers.<br>From order to operational in 6 weeks.
     </p>
 
-    <a href="https://containers.syaala.com/container#lead-form" class="cta-button" style="margin-bottom: 60px; display: inline-block; text-decoration: none;">REQUEST FOR PROPOSAL</a>
+    <a href="https://containers.syaala.com/container#lead-form" class="cta-button" style="margin-bottom: 80px; display: inline-block; text-decoration: none;">REQUEST FOR PROPOSAL</a>
 
-    <div style="position: absolute; bottom: 60px; left: 0; right: 0; text-align: center;">
-      <div style="font-size: 15px; color: #666666; margin-bottom: 12px;">
-        containers@syaala.com  •  containers.syaala.com
+    <div style="position: absolute; bottom: 80px; left: 0; right: 0; text-align: center; max-width: 600px; margin: 0 auto;">
+      <div style="font-size: 15px; color: #777777; margin-bottom: 18px; letter-spacing: 0.3px;">
+        containers@syaala.com
       </div>
-      <div style="font-size: 13px; color: #444444;">
-        © 2025 Syaala. Modular Infrastructure for the AI Era.
+      <div style="font-size: 15px; color: #777777; margin-bottom: 22px; letter-spacing: 0.3px;">
+        containers.syaala.com
+      </div>
+      <div style="font-size: 12px; color: #555555; letter-spacing: 0.5px;">
+        © 2025 Syaala Containers  •  Modular Infrastructure for the AI Era
       </div>
     </div>
   </div>
