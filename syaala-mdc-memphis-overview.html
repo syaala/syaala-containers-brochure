@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- Document: Syaala MDC Memphis Overview - real drawing geometry, simplified + magnified -->
+<html><head><meta charset="utf-8">
+<title>Syaala MDC &#183; Memphis Deployment</title>
+<style>
+  :root{ --ink:#0F1211; --line:#0F1211; --muted:#6b7280; --hair:#cdd1d6; }
+  @page { size: 420mm 297mm landscape; margin: 0; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#fff;color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+  .sheet{width:420mm;height:297mm;position:relative;background:#fff;overflow:hidden;page-break-after:always;padding:16mm 18mm 20mm;display:flex;flex-direction:column;}
+  .sheet:last-child{page-break-after:auto;}
+  .hd{display:flex;justify-content:space-between;align-items:baseline;border-bottom:0.4mm solid var(--line);padding-bottom:2.5mm;}
+  .hd .brand{font-size:12pt;font-weight:800;letter-spacing:4px;}
+  .hd .doc{font-size:6pt;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+  .titlerow{display:flex;justify-content:space-between;align-items:flex-end;margin-top:5mm;}
+  .kicker{font-size:6.5pt;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+  .h1{font-size:34pt;font-weight:800;letter-spacing:-1px;line-height:0.96;margin-top:1.5mm;}
+  .h1 .sub{font-weight:300;color:#3a3f44;}
+  .specline{font-size:8pt;letter-spacing:0.4px;color:#2a2f34;text-align:right;line-height:1.7;}
+  .specline b{font-weight:800;}
+  .stage{flex:1;display:flex;align-items:center;justify-content:center;margin-top:7mm;}
+  .stage svg{display:block;width:100%;height:100%;}
+  /* real drawing classes (from the A-101 / pod sheets) */
+  text{fill:var(--ink);}
+  .shell{fill:#fff;stroke:#000;stroke-width:1.4;}
+  .inn2{fill:none;stroke:#000;stroke-width:0.35;}
+  .part{stroke:#000;stroke-width:0.6;fill:none;}
+  .rk{fill:#fff;stroke:#000;stroke-width:0.8;}
+  .rkf{fill:url(#hatch);stroke:#000;stroke-width:0.8;}
+  .rkl{font-size:5.6px;font-weight:700;fill:#000;}
+  .sm{font-size:4.6px;fill:#000;}
+  .it{font-size:4.2px;fill:#000;}
+  .post{fill:url(#hatch);stroke:#000;stroke-width:0.5;}
+  .qd{fill:#000;}
+  .led{stroke:#000;stroke-width:0.3;fill:none;}
+  .dim{stroke:#000;stroke-width:0.3;fill:none;}
+  .dl{font-size:5px;font-family:'SF Mono',Menlo,monospace;fill:#000;}
+  .eq{fill:#fff;stroke:#000;stroke-width:0.6;}
+  .eql{font-size:5px;font-weight:700;}
+  .fire{fill:url(#fhatch);stroke:#000;stroke-width:0.7;}
+  .pen{fill:#000;}
+  .rule{stroke:#000;fill:none;}
+  .foot{position:absolute;bottom:9mm;left:18mm;font-size:5.6pt;letter-spacing:0.8px;color:var(--muted);}
+  .pgnum{position:absolute;bottom:9mm;right:18mm;font-size:5.6pt;letter-spacing:1px;color:var(--muted);text-transform:uppercase;}
+  /* APEX review credit + Syaala stamp, bottom-right */
+  .review{position:absolute;bottom:14mm;right:18mm;display:flex;align-items:center;gap:5mm;}
+  .review .credit{font-size:6pt;letter-spacing:1px;text-transform:uppercase;color:var(--ink);text-align:right;line-height:1.5;}
+  .review .credit b{font-weight:800;}
+  .review .stamp{width:22mm;height:22mm;opacity:0.92;}
+</style></head>
+<body>
+<!-- shared hatch patterns -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <pattern id="hatch" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3" stroke="#000" stroke-width="0.3"/></pattern>
+  <pattern id="fhatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3.2" stroke="#000" stroke-width="0.35"/></pattern>
+</defs></svg>
+
+<!-- ============ PAGE 1 - GPU COMPUTE (real A-101 floor-plan geometry) ============ -->
+<div class="sheet">
+  <div class="hd"><span class="brand">SYAALA</span><span class="doc">Modular Data Center &#183; Memphis Deployment &#183; Compute Module</span></div>
+  <div class="titlerow">
+    <div><div class="kicker">Module A &#183; Type A &#183; GPU compute container</div>
+      <div class="h1">GPU compute container.<span class="sub"> 8 racks.</span></div></div>
+    <div class="specline">
+      <b>8 &#215; NVIDIA VR NVL72</b> &#183; 1 Scalable Unit &#183; 576 GPU<br>
+      40&#8242; high-cube ISO 1AAA &#183; 12.19 &#215; 2.44 &#215; 2.90 m<br>
+      225 kW design / 250 kW ceiling per rack &#183; 90% liquid + 10% air
+    </div>
+  </div>
+  <div class="stage" style="flex-direction:column;gap:6mm;align-items:stretch;justify-content:flex-start;">
+    <!-- VIEW 1: FLOOR PLAN -->
+    <div style="display:flex;align-items:baseline;gap:4mm;"><span style="font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Plan &#183; looking down</span><span style="flex:1;border-bottom:0.3mm solid var(--line);"></span></div>
+    <svg viewBox="0 14 400 96" preserveAspectRatio="xMidYMid meet" style="height:auto;max-height:46%;">
+      <defs><marker id="tA" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,1.2 L6,4.8 z" fill="#111"/></marker></defs>
+      <g transform="translate(8,16)">
+        <rect class="shell" x="0" y="0" width="384" height="70"/>
+        <rect class="inn2" x="1.4" y="1.4" width="381.2" height="67.2"/>
+        <!-- TCS room -->
+        <line class="part" x1="68.1" y1="1.4" x2="68.1" y2="68.6"/>
+        <text class="rkl" x="34" y="33" text-anchor="middle">TCS ROOM</text>
+        <text class="sm" x="34" y="39" text-anchor="middle">valves / DI / manifold</text>
+        <text class="it" x="34" y="44" text-anchor="middle">agent cylinders &#183; VESDA &#183; BMS</text>
+        <!-- personnel egress door (swings in) -->
+        <rect class="eq" x="-2.5" y="8" width="2.5" height="9"/>
+        <path class="led" d="M 0 17 A 9 9 0 0 0 9 8"/>
+        <text class="it" x="13" y="22" text-anchor="start">36&#8243; egress</text>
+        <!-- corner posts -->
+        <rect class="post" x="0" y="0" width="2.6" height="2.6"/><rect class="post" x="381.4" y="0" width="2.6" height="2.6"/>
+        <rect class="post" x="0" y="67.4" width="2.6" height="2.6"/><rect class="post" x="381.4" y="67.4" width="2.6" height="2.6"/>
+        <!-- 8 racks -->
+        <rect class="rk" x="78.2"  y="3" width="19.1" height="38.3"/><text class="rkl" x="87.8"  y="20" text-anchor="middle">R01</text>
+        <rect class="rk" x="117.7" y="3" width="19.1" height="38.3"/><text class="rkl" x="127.3" y="20" text-anchor="middle">R02</text>
+        <rect class="rk" x="157.2" y="3" width="19.1" height="38.3"/><text class="rkl" x="166.8" y="20" text-anchor="middle">R03</text>
+        <rect class="rk" x="196.7" y="3" width="19.1" height="38.3"/><text class="rkl" x="206.3" y="20" text-anchor="middle">R04</text>
+        <rect class="rk" x="236.2" y="3" width="19.1" height="38.3"/><text class="rkl" x="245.8" y="20" text-anchor="middle">R05</text>
+        <rect class="rk" x="275.7" y="3" width="19.1" height="38.3"/><text class="rkl" x="285.3" y="20" text-anchor="middle">R06</text>
+        <rect class="rk" x="315.2" y="3" width="19.1" height="38.3"/><text class="rkl" x="324.8" y="20" text-anchor="middle">R07</text>
+        <rect class="rk" x="354.7" y="3" width="19.1" height="38.3"/><text class="rkl" x="364.3" y="20" text-anchor="middle">R08</text>
+        <!-- front-door line (aisle face, heavier) -->
+        <g stroke="#000" stroke-width="0.6">
+          <line x1="78.2" y1="40" x2="97.3" y2="40"/><line x1="117.7" y1="40" x2="136.8" y2="40"/>
+          <line x1="157.2" y1="40" x2="176.3" y2="40"/><line x1="196.7" y1="40" x2="215.8" y2="40"/>
+          <line x1="236.2" y1="40" x2="255.3" y2="40"/><line x1="275.7" y1="40" x2="294.8" y2="40"/>
+          <line x1="315.2" y1="40" x2="334.3" y2="40"/><line x1="354.7" y1="40" x2="373.8" y2="40"/>
+        </g>
+        <!-- rack internal detail: U-grid + center NVLink spine -->
+        <g stroke="#bbb" stroke-width="0.18">
+          <line x1="79" y1="12" x2="96.5" y2="12"/><line x1="79" y1="24" x2="96.5" y2="24"/><line x1="79" y1="32" x2="96.5" y2="32"/><line x1="87.8" y1="3" x2="87.8" y2="41.3"/>
+          <line x1="118.5" y1="12" x2="136" y2="12"/><line x1="118.5" y1="24" x2="136" y2="24"/><line x1="118.5" y1="32" x2="136" y2="32"/><line x1="127.3" y1="3" x2="127.3" y2="41.3"/>
+          <line x1="158" y1="12" x2="175.5" y2="12"/><line x1="158" y1="24" x2="175.5" y2="24"/><line x1="158" y1="32" x2="175.5" y2="32"/><line x1="166.8" y1="3" x2="166.8" y2="41.3"/>
+          <line x1="197.5" y1="12" x2="215" y2="12"/><line x1="197.5" y1="24" x2="215" y2="24"/><line x1="197.5" y1="32" x2="215" y2="32"/><line x1="206.3" y1="3" x2="206.3" y2="41.3"/>
+          <line x1="237" y1="12" x2="254.5" y2="12"/><line x1="237" y1="24" x2="254.5" y2="24"/><line x1="237" y1="32" x2="254.5" y2="32"/><line x1="245.8" y1="3" x2="245.8" y2="41.3"/>
+          <line x1="276.5" y1="12" x2="294" y2="12"/><line x1="276.5" y1="24" x2="294" y2="24"/><line x1="276.5" y1="32" x2="294" y2="32"/><line x1="285.3" y1="3" x2="285.3" y2="41.3"/>
+          <line x1="316" y1="12" x2="333.5" y2="12"/><line x1="316" y1="24" x2="333.5" y2="24"/><line x1="316" y1="32" x2="333.5" y2="32"/><line x1="324.8" y1="3" x2="324.8" y2="41.3"/>
+          <line x1="355.5" y1="12" x2="373" y2="12"/><line x1="355.5" y1="24" x2="373" y2="24"/><line x1="355.5" y1="32" x2="373" y2="32"/><line x1="364.3" y1="3" x2="364.3" y2="41.3"/>
+        </g>
+        <!-- QD couplings at rear -->
+        <g class="qd">
+          <rect x="86.3" y="3" width="3" height="1.6"/><rect x="125.8" y="3" width="3" height="1.6"/>
+          <rect x="165.3" y="3" width="3" height="1.6"/><rect x="204.8" y="3" width="3" height="1.6"/>
+          <rect x="244.3" y="3" width="3" height="1.6"/><rect x="283.8" y="3" width="3" height="1.6"/>
+          <rect x="323.3" y="3" width="3" height="1.6"/><rect x="362.8" y="3" width="3" height="1.6"/>
+        </g>
+        <!-- aisle labels -->
+        <text class="sm" x="226" y="54" text-anchor="middle">SERVICE / COLD AISLE &#183; 3&#8242;-9&#8243; CLEAR (NEC 110.26 COND. 2)</text>
+        <text class="it" x="226" y="59" text-anchor="middle">DLC quick-disconnect at rack rear (8&#215;, shown &#9632;)</text>
+        <!-- TCS glands -->
+        <circle class="eq" cx="110" cy="68.6" r="2.2"/><circle class="eq" cx="122" cy="68.6" r="2.2"/>
+        <text class="it" x="116" y="65" text-anchor="middle">TCS S/R glands</text>
+        <!-- cargo doors east -->
+        <line class="part" x1="384" y1="3" x2="384" y2="67"/>
+        <path class="led" d="M 384 18 A 12 12 0 0 1 396 6"/>
+        <path class="led" d="M 384 52 A 12 12 0 0 0 396 64"/>
+        <text class="it" x="389" y="35" text-anchor="middle" transform="rotate(-90 389 35)">CARGO DOORS &#183; OPEN OUT</text>
+      </g>
+      <!-- dimension chains -->
+      <g class="dim">
+        <line x1="8" y1="96" x2="8" y2="100"/><line x1="76.1" y1="96" x2="76.1" y2="100"/><line x1="392" y1="96" x2="392" y2="100"/>
+        <line x1="8" y1="98" x2="76.1" y2="98" marker-start="url(#tA)" marker-end="url(#tA)"/>
+        <line x1="76.1" y1="98" x2="392" y2="98" marker-start="url(#tA)" marker-end="url(#tA)"/>
+      </g>
+      <text class="dl" x="42" y="96.6" text-anchor="middle">7&#8242;-0&#8243;</text>
+      <text class="dl" x="234" y="96.6" text-anchor="middle">RACK ZONE 32&#8242;-6&#8243; (8 BAYS @ 4&#8242;-0&#8243; PITCH + END CLEARANCE)</text>
+      <g class="dim">
+        <line x1="8" y1="103" x2="8" y2="107"/><line x1="392" y1="103" x2="392" y2="107"/>
+        <line x1="8" y1="105" x2="392" y2="105" marker-start="url(#tA)" marker-end="url(#tA)"/>
+      </g>
+      <text class="dl" x="200" y="103.6" text-anchor="middle">40&#8242;-0&#8243; (12.19 m) OVERALL</text>
+    </svg>
+
+    <!-- VIEW 2: SECTION A-A + THERMODYNAMIC PATH (the 10% air, DLC spine, FCU, plenum) -->
+    <div style="display:flex;align-items:baseline;gap:4mm;margin-top:1mm;"><span style="font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Section A-A &#183; thermodynamic path</span><span style="flex:1;border-bottom:0.3mm solid var(--line);"></span></div>
+    <svg viewBox="40 20 350 100" preserveAspectRatio="xMidYMid meet" style="height:auto;max-height:50%;">
+      <defs>
+        <marker id="tS" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,1.2 L6,4.8 z" fill="#000"/></marker>
+        <marker id="ahS" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0.8 L5,3 L0,5.2 z" fill="#000"/></marker>
+      </defs>
+      <!-- hot return plenum (the 10% air path) -->
+      <rect class="inn2" x="60" y="26" width="70.1" height="11.9" fill="none" stroke-dasharray="2,1.4"/>
+      <text class="it" x="95" y="31" text-anchor="middle">HOT RETURN PLENUM (1&#8242;-4&#8243;)</text>
+      <rect class="shell" x="60" y="26" width="70.1" height="80.8"/>
+      <!-- rack (north wall) -->
+      <rect class="rk" x="60" y="37.9" width="36" height="68.9"/>
+      <text class="rkl" x="78" y="66" text-anchor="middle">VR NVL72</text>
+      <text class="sm" x="78" y="72" text-anchor="middle">48U &#183; 250 kW</text>
+      <text class="it" x="78" y="78" text-anchor="middle">NVLink spine</text>
+      <g class="inn2"><line x1="78" y1="48" x2="94" y2="48"/><line x1="78" y1="58" x2="94" y2="58"/><line x1="62" y1="88" x2="94" y2="88"/><line x1="62" y1="98" x2="94" y2="98"/></g>
+      <!-- FCU in plenum over aisle -->
+      <rect class="fcu" x="104" y="28" width="22" height="8" fill="url(#hatch)" stroke="#000" stroke-width="0.5"/><text class="sm" x="115" y="33" text-anchor="middle">FCU</text>
+      <text class="it" x="113" y="100" text-anchor="middle">COLD AISLE</text>
+      <!-- thermo arrows -->
+      <line x1="113.1" y1="31" x2="113.1" y2="95" stroke="#000" stroke-width="0.6" marker-end="url(#ahS)"/>
+      <line x1="111" y1="88.8" x2="98" y2="88.8" stroke="#000" stroke-width="0.6" marker-end="url(#ahS)"/>
+      <line x1="84" y1="39" x2="84" y2="33" stroke="#000" stroke-width="0.6" stroke-dasharray="2,1.2" marker-end="url(#ahS)"/>
+      <line x1="86" y1="32" x2="104" y2="32" stroke="#000" stroke-width="0.6" stroke-dasharray="2,1.2" marker-end="url(#ahS)"/>
+      <line x1="69" y1="44" x2="69" y2="60" stroke="#000" stroke-width="0.9" marker-end="url(#ahS)"/>
+      <line x1="73" y1="60" x2="73" y2="44" stroke="#000" stroke-width="0.9" stroke-dasharray="1.6,1" marker-end="url(#ahS)"/>
+      <text class="it" x="71" y="42" text-anchor="middle">DLC S / R</text>
+      <!-- section dims -->
+      <g class="dim">
+        <line x1="55" y1="37.9" x2="58" y2="37.9"/><line x1="55" y1="106.8" x2="58" y2="106.8"/><line x1="56.5" y1="37.9" x2="56.5" y2="106.8" marker-start="url(#tS)" marker-end="url(#tS)"/>
+      </g>
+      <text class="dl" x="53" y="72" text-anchor="middle" transform="rotate(-90 53 72)">8&#8242;-10&#8243;</text>
+      <!-- thermo legend (right) -->
+      <g transform="translate(150,30)">
+        <text class="rkl" x="0" y="0" style="font-size:5.4px">THERMO LEGEND</text>
+        <line x1="0" y1="8" x2="18" y2="8" stroke="#000" stroke-width="0.6" marker-end="url(#ahS)"/><text class="sm" x="22" y="9.5">cold supply air (down the aisle)</text>
+        <line x1="0" y1="16" x2="18" y2="16" stroke="#000" stroke-width="0.6" stroke-dasharray="2,1.2" marker-end="url(#ahS)"/><text class="sm" x="22" y="17.5">hot return air (rack rear &#8594; plenum)</text>
+        <line x1="0" y1="24" x2="18" y2="24" stroke="#000" stroke-width="0.9" marker-end="url(#ahS)"/><text class="sm" x="22" y="25.5">DLC supply 45&#8451; (to cold-plate)</text>
+        <line x1="0" y1="32" x2="18" y2="32" stroke="#000" stroke-width="0.9" stroke-dasharray="1.6,1" marker-end="url(#ahS)"/><text class="sm" x="22" y="33.5">DLC return 65&#8451; (to manifold &#8594; CDU)</text>
+        <rect x="0" y="40" width="18" height="6" fill="url(#hatch)" stroke="#000" stroke-width="0.4"/><text class="sm" x="22" y="44.5">overhead FCU (10% air residual)</text>
+        <rect class="inn2" x="0" y="50" width="18" height="6" stroke-dasharray="2,1.4"/><text class="sm" x="22" y="54.5">hot return plenum (1&#8242;-4&#8243;)</text>
+      </g>
+      <!-- heat balance + networking (right, lower) -->
+      <g transform="translate(150,92)">
+        <text class="rkl" x="0" y="0" style="font-size:5.4px">HEAT BALANCE + FABRIC / RACK</text>
+        <text class="sm" x="0" y="7">250 kW ceiling &#183; 90% liquid &#8594; CDU (225 kW) &#183; 10% air &#8594; FCU (25 kW)</text>
+        <text class="sm" x="0" y="13">TCS 45/65&#8451; (20K &#916;T) &#183; facility 35/45&#8451; (5K HX approach) &#183; PUE 1.10 to 1.15</text>
+        <text class="sm" x="0" y="19">network: 2&#215; SN5600 800G leaf (EoR) &#183; spine at Scalable-Unit level &#183; NVLink in-rack spine</text>
+      </g>
+    </svg>
+  </div>
+  <div class="foot">Plan + Section A-A thermodynamic path &#183; 90% liquid / 10% air &#183; basis of design, not for construction</div>
+  <div class="review"><div class="credit">Reviewed by<br><b>APEX Systems</b></div></div>
+  <div class="pgnum">01 / 03 &#183; Compute module</div>
+</div>
+
+<!-- ============ PAGE 2 - POWER (real power-container geometry) ============ -->
+<div class="sheet">
+  <div class="hd"><span class="brand">SYAALA</span><span class="doc">Modular Data Center &#183; Memphis Deployment &#183; Power + Cooling Modules</span></div>
+  <div class="titlerow">
+    <div><div class="kicker">Module B + Module C &#183; power container + cooling skid</div>
+      <div class="h1">Power &amp; cooling.<span class="sub"> Four per block &#183; 2N per IT container.</span></div></div>
+    <div class="specline">
+      <b>Power:</b> Type B &#215;4 at full build (PWR-A1/B1/A2/B2)<br>
+      PDC + 4 &#215; 800 kVA UPS (3+1 N+1) + BESS &#183; 40&#8242; HC ISO<br>
+      <b>Cooling:</b> Motivair MCDU-60 &#183; 2.35 MW &#183; pumps N+1 &#183; HS-20 skid<br>
+      technology 45 / 65 C &#183; facility 35 / 45 C &#183; plate HX isolated
+    </div>
+  </div>
+  <div class="stage" style="flex-direction:column;gap:5mm;align-items:stretch;justify-content:flex-start;">
+
+    <!-- VIEW 1: POWER CONTAINER -->
+    <div style="display:flex;align-items:baseline;gap:4mm;"><span style="font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Power container (Type B) &#183; plan</span><span style="flex:1;border-bottom:0.3mm solid var(--line);"></span></div>
+    <svg viewBox="0 4 400 102" preserveAspectRatio="xMidYMid meet" style="height:auto;max-height:46%;">
+      <defs><marker id="tB" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,1.2 L6,4.8 z" fill="#000"/></marker></defs>
+      <g transform="translate(8,22)">
+        <rect class="shell" x="0" y="0" width="384" height="64"/>
+        <rect class="inn2" x="1.4" y="1.4" width="381.2" height="61.2"/>
+        <rect class="eq" x="-3" y="30" width="3" height="10"/><text class="it" x="-4" y="36" text-anchor="end">MV in</text>
+        <rect class="eq" x="6" y="14" width="40" height="42"/><text class="eql" x="26" y="33" text-anchor="middle">PDC</text><text class="sm" x="26" y="39" text-anchor="middle">distribution</text>
+        <rect class="eq" x="58" y="14" width="40" height="42"/><text class="eql" x="78" y="33" text-anchor="middle">UPS-1</text><text class="sm" x="78" y="39" text-anchor="middle">800 kVA</text>
+        <rect class="eq" x="104" y="14" width="40" height="42"/><text class="eql" x="124" y="33" text-anchor="middle">UPS-2</text><text class="sm" x="124" y="39" text-anchor="middle">800 kVA</text>
+        <rect class="eq" x="150" y="14" width="40" height="42"/><text class="eql" x="170" y="33" text-anchor="middle">UPS-3</text><text class="sm" x="170" y="39" text-anchor="middle">800 kVA</text>
+        <rect class="eq" x="196" y="14" width="40" height="42"/><text class="eql" x="216" y="32" text-anchor="middle">UPS-4</text><text class="sm" x="216" y="38" text-anchor="middle">800 kVA</text><text class="it" x="216" y="43" text-anchor="middle">+1 standby</text>
+        <line x1="26" y1="10" x2="256" y2="10" stroke="#000" stroke-width="0.9"/>
+        <text class="it" x="60" y="8.5" text-anchor="middle">480V critical bus</text>
+        <g stroke="#000" stroke-width="0.5" fill="none">
+          <line x1="26" y1="10" x2="26" y2="14"/><rect x="24.7" y="10.6" width="2.6" height="2.6"/>
+          <line x1="78" y1="10" x2="78" y2="14"/><rect x="76.7" y="10.6" width="2.6" height="2.6"/>
+          <line x1="124" y1="10" x2="124" y2="14"/><rect x="122.7" y="10.6" width="2.6" height="2.6"/>
+          <line x1="170" y1="10" x2="170" y2="14"/><rect x="168.7" y="10.6" width="2.6" height="2.6"/>
+          <line x1="216" y1="10" x2="216" y2="14"/><rect x="214.7" y="10.6" width="2.6" height="2.6"/>
+        </g>
+        <g stroke="#bbb" stroke-width="0.18">
+          <line x1="58" y1="48" x2="98" y2="48"/><line x1="104" y1="48" x2="144" y2="48"/>
+          <line x1="150" y1="48" x2="190" y2="48"/><line x1="196" y1="48" x2="236" y2="48"/>
+        </g>
+        <text class="it" x="150" y="61" text-anchor="middle">FRONT-ACCESS MAINTENANCE AISLE (3&#8242;-0&#8243; CLEAR) &#183; 3 active + 1 standby (3+1 N+1) &#183; static + maintenance bypass</text>
+        <rect class="fire" x="300" y="6" width="78" height="58"/>
+        <line class="eq" x1="300" y1="6" x2="300" y2="64" stroke-width="0.9"/>
+        <g fill="#fff" stroke="#000" stroke-width="0.4">
+          <rect x="306" y="15" width="14" height="39"/><rect x="322" y="15" width="14" height="39"/>
+          <rect x="338" y="15" width="14" height="39"/><rect x="354" y="15" width="14" height="39"/>
+        </g>
+        <text class="eql" x="339" y="12.5" text-anchor="middle">BESS &#183; 1,280 kWh LFP</text>
+        <text class="it" x="339" y="70.5" text-anchor="middle">DC-coupled UL 9540 &#183; NFPA 855 fire zone</text>
+        <rect class="eq" x="384" y="20" width="3" height="12"/><text class="it" x="389" y="27" text-anchor="middle" transform="rotate(-90 389 27)">EXHAUST + FIRE DAMPER</text>
+        <rect class="pen" x="240" y="-3" width="16" height="3"/><text class="it" x="248" y="-5" text-anchor="middle">3,200A spine busway &#8594; IT container</text>
+      </g>
+      <g class="dim">
+        <line x1="8" y1="93.5" x2="8" y2="96"/><line x1="392" y1="93.5" x2="392" y2="96"/>
+        <line x1="8" y1="95" x2="392" y2="95" marker-start="url(#tB)" marker-end="url(#tB)"/>
+      </g>
+      <text class="dl" x="200" y="92.5" text-anchor="middle">40&#8242;-0&#8243; (12.19 m) &#183; 8&#8242; W &#183; 9&#8242;-6&#8243; H HIGH-CUBE ISO 1AAA &#183; transformer on adjacent external pad</text>
+    </svg>
+
+    <!-- VIEW 2: COOLING SKID + P&ID -->
+    <div style="display:flex;align-items:baseline;gap:4mm;margin-top:1mm;"><span style="font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Cooling skid (Type C) &#183; plan + flow</span><span style="flex:1;border-bottom:0.3mm solid var(--line);"></span></div>
+    <svg viewBox="20 14 320 92" preserveAspectRatio="xMidYMid meet" style="height:auto;max-height:46%;">
+      <defs><marker id="tC" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,1.2 L6,4.8 z" fill="#000"/></marker></defs>
+      <g transform="translate(40,24)">
+        <rect x="0" y="0" width="200" height="80" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="4,2"/>
+        <text class="it" x="100" y="-3" text-anchor="middle">OPEN HS-20 SKID (no enclosure) &#183; sets on a 6in RC pad</text>
+        <rect class="eq" x="8" y="14" width="62" height="52"/><text class="eql" x="39" y="36" text-anchor="middle">CDU</text><text class="sm" x="39" y="42" text-anchor="middle">Motivair MCDU-60</text><text class="sm" x="39" y="47" text-anchor="middle">2.35 MW @ 45/65&#8451;</text>
+        <rect class="eq" x="80" y="14" width="34" height="24"/><text class="eql" x="97" y="24" text-anchor="middle">PHX</text><text class="sm" x="97" y="30" text-anchor="middle">Alfa Laval</text>
+        <rect class="eq" x="80" y="46" width="16" height="20"/><text class="sm" x="88" y="57" text-anchor="middle">P-1</text>
+        <rect class="eq" x="98" y="46" width="16" height="20"/><text class="sm" x="106" y="57" text-anchor="middle">P-2 N+1</text>
+        <rect class="eq" x="124" y="14" width="30" height="24"/><text class="sm" x="139" y="24" text-anchor="middle">EXP TANK</text><text class="it" x="139" y="29" text-anchor="middle">+ air sep</text>
+        <rect class="eq" x="124" y="46" width="30" height="20"/><text class="sm" x="139" y="56" text-anchor="middle">CHEM + DI</text>
+        <rect class="eq" x="162" y="14" width="30" height="52"/><text class="sm" x="177" y="38" text-anchor="middle">VALVE</text><text class="sm" x="177" y="43" text-anchor="middle">MANIFOLD</text>
+        <g stroke="#000" stroke-width="0.7" fill="none">
+          <line x1="70" y1="22" x2="80" y2="22"/>
+          <line x1="70" y1="30" x2="76" y2="30"/><line x1="76" y1="30" x2="76" y2="56"/><line x1="76" y1="56" x2="80" y2="56"/>
+          <line x1="114" y1="56" x2="120" y2="56"/><line x1="120" y1="56" x2="120" y2="26"/><line x1="120" y1="26" x2="124" y2="26"/>
+          <line x1="114" y1="22" x2="124" y2="22"/>
+          <line x1="154" y1="26" x2="162" y2="26"/>
+          <line x1="154" y1="56" x2="158" y2="56"/><line x1="158" y1="56" x2="158" y2="40"/><line x1="158" y1="40" x2="162" y2="40"/>
+          <line x1="177" y1="14" x2="177" y2="0"/>
+        </g>
+        <g stroke="#000" stroke-width="0.5" fill="#fff">
+          <path d="M73 20.5 l3 1.5 l-3 1.5 z M79 20.5 l-3 1.5 l3 1.5 z"/>
+          <path d="M118 24.5 l3 1.5 l-3 1.5 z M124 24.5 l-3 1.5 l3 1.5 z"/>
+          <path d="M156 38.5 l3 1.5 l-3 1.5 z M162 38.5 l-3 1.5 l3 1.5 z"/>
+        </g>
+        <g stroke="#000" stroke-width="0.6" fill="none" stroke-dasharray="2,1.4">
+          <line x1="97" y1="38" x2="97" y2="76"/><line x1="97" y1="76" x2="34" y2="76"/><line x1="34" y1="76" x2="34" y2="80"/>
+        </g>
+        <rect class="pen" x="170" y="-3" width="14" height="3"/><text class="it" x="177" y="-5" text-anchor="middle">TCS S/R &#8594; IT container</text>
+        <rect class="pen" x="27" y="80" width="14" height="3"/><text class="it" x="100" y="88" text-anchor="middle">primary FW loop (dashed) 35/45&#8451; &#8594; dry coolers</text>
+      </g>
+      <g class="dim"><line x1="40" y1="100" x2="240" y2="100" marker-start="url(#tC)" marker-end="url(#tC)"/></g>
+      <text class="dl" x="140" y="99" text-anchor="middle">HS-20 SKID 20&#8242; &#215; 8&#8242;</text>
+    </svg>
+  </div>
+  <div class="foot">Power container + cooling skid &#183; plan + flow &#183; basis of design, not for construction</div>
+  <div class="review"><div class="credit">Reviewed by<br><b>APEX Systems</b></div></div>
+  <div class="pgnum">02 / 03 &#183; Power + cooling</div>
+</div>
+
+<!-- ============ PAGE 4 - 4 MW BLOCK, L-SHAPE FOOTPRINT ============ -->
+<div class="sheet">
+  <div class="hd"><span class="brand">SYAALA</span><span class="doc">Modular Data Center &#183; Memphis Deployment &#183; Site Footprint</span></div>
+  <div class="titlerow">
+    <div><div class="kicker">Modules assembled &#183; L-shape site footprint</div>
+      <div class="h1">One block.<span class="sub"> Four megawatts.</span></div></div>
+    <div class="specline">
+      <b>16 racks &#183; 4.0 MW ceiling / 3.6 MW operating</b><br>
+      2 compute + 4 power + 2 cooling skids &#183; 1,152 GPU &#183; 2 Scalable Units<br>
+      L-shape pad &#183; 20 ft fire-apparatus loop &#183; orients to any parcel
+    </div>
+  </div>
+  <div class="stage">
+    <svg viewBox="0 0 300 152" preserveAspectRatio="xMidYMid meet">
+      <defs><marker id="tD" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,3 L6,1.4 L6,4.6 z" fill="#000"/></marker></defs>
+      <path class="shell" d="M10,12 L196,12 L196,86 L268,86 L268,140 L10,140 Z" fill="#fff"/>
+      <text class="it" x="13" y="10">PAVED HARDSTAND</text>
+      <path class="rule" d="M18,20 L188,20 L188,94 L260,94 L260,132 L18,132 Z" stroke-width="0.5" stroke-dasharray="4,2.5"/>
+      <rect class="eq" x="24" y="70" width="14" height="16"/><text class="sm" x="31" y="80" text-anchor="middle">MV</text>
+      <rect class="rk" x="46" y="24" width="61" height="12"/><text class="rkl" x="76.5" y="32" text-anchor="middle">POWER A1</text><rect class="rk" x="111" y="24" width="61" height="12"/><text class="rkl" x="141.5" y="32" text-anchor="middle">POWER A2</text>
+      <rect class="rk" x="46" y="39" width="126" height="15"/><text class="rkl" x="109" y="48.5" text-anchor="middle">IT A1 &#183; 8 RACKS</text>
+      <rect class="eq" x="46" y="57" width="61" height="9" stroke-dasharray="3,1.5"/><text class="sm" x="76" y="63" text-anchor="middle">CDU SKID 1</text>
+      <rect class="eq" x="111" y="57" width="61" height="9" stroke-dasharray="3,1.5"/><text class="sm" x="141" y="63" text-anchor="middle">CDU SKID 2</text>
+      <rect class="rk" x="46" y="69" width="126" height="15"/><text class="rkl" x="109" y="78.5" text-anchor="middle">IT A2 &#183; 8 RACKS</text>
+      <rect class="rk" x="46" y="87" width="61" height="12"/><text class="rkl" x="76.5" y="95" text-anchor="middle">POWER B1</text><rect class="rk" x="111" y="87" width="61" height="12"/><text class="rkl" x="141.5" y="95" text-anchor="middle">POWER B2</text>
+      <!-- heat rejection arm -->
+      <rect class="eq" x="200" y="100" width="56" height="30"/>
+      <g stroke="#bbb" stroke-width="0.25"><line x1="214" y1="100" x2="214" y2="130"/><line x1="228" y1="100" x2="228" y2="130"/><line x1="242" y1="100" x2="242" y2="130"/></g>
+      <text class="rkl" x="228" y="113" text-anchor="middle">FLUID COOLERS</text><text class="sm" x="228" y="118.5" text-anchor="middle">3+1 dry / adiabatic</text>
+      <!-- facility-water run -->
+      <g class="rule" stroke-width="0.6"><polyline points="172,61 182,61 182,112 200,112" fill="none"/></g>
+      <text class="it" x="184" y="137" text-anchor="start">facility 35 / 45 C</text>
+      <!-- MV -> power cans -->
+      <g class="rule" stroke-width="0.5"><polyline points="38,74 42,74 42,30 46,30" fill="none"/><polyline points="38,82 42,82 42,93 46,93" fill="none"/></g>
+      <g class="dim"><line x1="10" y1="146" x2="268" y2="146" marker-start="url(#tD)" marker-end="url(#tD)"/></g>
+      <text class="dl" x="139" y="151" text-anchor="middle" style="font-size:4px">pad includes 20 ft fire-apparatus loop on all sides</text>
+    </svg>
+  </div>
+  <div class="foot">Site footprint, L-shape, diagrammatic &#8212; dimensions per C-102 &#183; site-agnostic</div>
+  <div class="review"><div class="credit">Reviewed by<br><b>APEX Systems</b></div></div>
+  <div class="pgnum">03 / 03 &#183; Block footprint</div>
+</div>
+
+
+</body></html>
