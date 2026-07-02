@@ -210,10 +210,10 @@
   <div class="hd"><span class="brand">SYAALA</span><span class="doc">Modular Data Center &#183; Memphis Deployment &#183; Power + Cooling Modules</span></div>
   <div class="titlerow">
     <div><div class="kicker">Module B + Module C &#183; power container + cooling skid</div>
-      <div class="h1">Power &amp; cooling.<span class="sub"> Four per block &#183; 2N per IT container.</span></div></div>
+      <div class="h1">Power &amp; cooling.<span class="sub"> One per chain &#183; A/B.</span></div></div>
     <div class="specline">
-      <b>Power:</b> Type B &#215;4 at full build (PWR-A1/B1/A2/B2)<br>
-      PDC + 4 &#215; 800 kVA UPS (3+1 N+1) + BESS &#183; 40&#8242; HC ISO<br>
+      <b>Power:</b> Type B &#215;2 (A/B chains &#183; shed-by-design)<br>
+      PDC + 4 &#215; 800 kVA UPS (3+1 N+1) &#183; 40&#8242; HC ISO &#183; ESS on outdoor pads<br>
       <b>Cooling:</b> Motivair MCDU-60 &#183; 2.35 MW &#183; pumps N+1 &#183; HS-20 skid<br>
       technology 45 / 65 C &#183; facility 35 / 45 C &#183; plate HX isolated
     </div>
@@ -253,8 +253,8 @@
           <rect x="306" y="15" width="14" height="39"/><rect x="322" y="15" width="14" height="39"/>
           <rect x="338" y="15" width="14" height="39"/><rect x="354" y="15" width="14" height="39"/>
         </g>
-        <text class="eql" x="339" y="12.5" text-anchor="middle">BESS &#183; 1,280 kWh LFP</text>
-        <text class="it" x="339" y="70.5" text-anchor="middle">DC-coupled UL 9540 &#183; NFPA 855 fire zone</text>
+        <text class="eql" x="339" y="12.5" text-anchor="middle">ESS DC-TIE SECTION</text>
+        <text class="it" x="339" y="61.5" text-anchor="middle">BESS &#8594; OUTDOOR PADS (NFPA 855)</text>
         <rect class="eq" x="384" y="20" width="3" height="12"/><text class="it" x="389" y="27" text-anchor="middle" transform="rotate(-90 389 27)">EXHAUST + FIRE DAMPER</text>
         <rect class="pen" x="240" y="-3" width="16" height="3"/><text class="it" x="248" y="-5" text-anchor="middle">3,200A spine busway &#8594; IT container</text>
       </g>
@@ -316,7 +316,7 @@
       <div class="h1">One block.<span class="sub"> Four megawatts.</span></div></div>
     <div class="specline">
       <b>16 racks &#183; 4.0 MW ceiling / 3.6 MW operating</b><br>
-      2 compute + 4 power + 2 cooling skids &#183; 1,152 GPU &#183; 2 Scalable Units<br>
+      2 compute + 2 power + 2 cooling skids + 2 BESS pads &#183; 1,152 GPU &#183; 2 Scalable Units<br>
       L-shape pad &#183; 20 ft fire-apparatus loop &#183; orients to any parcel
     </div>
   </div>
@@ -327,12 +327,12 @@
       <text class="it" x="13" y="10">PAVED HARDSTAND</text>
       <path class="rule" d="M18,20 L188,20 L188,94 L260,94 L260,132 L18,132 Z" stroke-width="0.5" stroke-dasharray="4,2.5"/>
       <rect class="eq" x="24" y="70" width="14" height="16"/><text class="sm" x="31" y="80" text-anchor="middle">MV</text>
-      <rect class="rk" x="46" y="24" width="61" height="12"/><text class="rkl" x="76.5" y="32" text-anchor="middle">POWER A1</text><rect class="rk" x="111" y="24" width="61" height="12"/><text class="rkl" x="141.5" y="32" text-anchor="middle">POWER A2</text>
+      <rect class="rk" x="46" y="24" width="126" height="12"/><text class="rkl" x="109" y="32" text-anchor="middle">POWER A</text><rect class="eq" x="24" y="24" width="16" height="12" stroke-dasharray="3,1.5"/><text class="sm" x="32" y="20.5" text-anchor="middle">BESS A</text>
       <rect class="rk" x="46" y="39" width="126" height="15"/><text class="rkl" x="109" y="48.5" text-anchor="middle">IT A1 &#183; 8 RACKS</text>
       <rect class="eq" x="46" y="57" width="61" height="9" stroke-dasharray="3,1.5"/><text class="sm" x="76" y="63" text-anchor="middle">CDU SKID 1</text>
       <rect class="eq" x="111" y="57" width="61" height="9" stroke-dasharray="3,1.5"/><text class="sm" x="141" y="63" text-anchor="middle">CDU SKID 2</text>
       <rect class="rk" x="46" y="69" width="126" height="15"/><text class="rkl" x="109" y="78.5" text-anchor="middle">IT A2 &#183; 8 RACKS</text>
-      <rect class="rk" x="46" y="87" width="61" height="12"/><text class="rkl" x="76.5" y="95" text-anchor="middle">POWER B1</text><rect class="rk" x="111" y="87" width="61" height="12"/><text class="rkl" x="141.5" y="95" text-anchor="middle">POWER B2</text>
+      <rect class="rk" x="46" y="87" width="126" height="12"/><text class="rkl" x="109" y="95" text-anchor="middle">POWER B</text><rect class="eq" x="24" y="87" width="16" height="12" stroke-dasharray="3,1.5"/><text class="sm" x="32" y="104.5" text-anchor="middle">BESS B</text>
       <!-- heat rejection arm -->
       <rect class="eq" x="200" y="100" width="56" height="30"/>
       <g stroke="#bbb" stroke-width="0.25"><line x1="214" y1="100" x2="214" y2="130"/><line x1="228" y1="100" x2="228" y2="130"/><line x1="242" y1="100" x2="242" y2="130"/></g>
@@ -346,7 +346,7 @@
       <text class="dl" x="139" y="151" text-anchor="middle" style="font-size:4px">pad includes 20 ft fire-apparatus loop on all sides</text>
     </svg>
   </div>
-  <div class="foot">Site footprint, L-shape, diagrammatic &#8212; dimensions per C-102 &#183; site-agnostic</div>
+  <div class="foot">Site footprint, diagrammatic &#8212; adopted S-401 row-stack; dimensions per S-401/C-102 &#183; site-agnostic</div>
   <div class="review"><div class="credit">Reviewed by<br><b>APEX Systems</b></div></div>
   <div class="pgnum">03 / 03 &#183; Block footprint</div>
 </div>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!-- Document: Syaala Technologies, Inc. | Modular Data Center Product Line 2026.pdf -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Syaala Technologies | Modular Data Center Product Line 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#0F1211; --ink2:#374151; --ink3:#6B7280; --ink4:#9CA3AF;
+    --rule:#E5E7EB; --rule2:#D1D5DB; --bg2:#F9FAFB;
+    --em:#10B981; --em-soft:#ECFDF5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:#CDCDCD;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mono{font-family:'JetBrains Mono',monospace}
+
+  .page{width:210mm;height:297mm;background:#fff;position:relative;overflow:hidden;page-break-after:always;padding:15mm 16mm 13mm;display:flex;flex-direction:column}
+  .page:last-child{page-break-after:auto}
+
+  .hd{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+  .hd img{height:22px;width:auto;display:block}
+  .hd-label{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+
+  .ft{margin-top:auto;padding-top:10px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline}
+  .ft span{font-size:8.5px;color:var(--ink4);letter-spacing:.04em;line-height:1.5}
+
+  .eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--em);line-height:1.5}
+  h1{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1.08;color:var(--ink)}
+  .sub{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.65;max-width:520px}
+  h2{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);line-height:1.5}
+  .h2-rule{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .h2-rule::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+  .badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--rule2);border-radius:3px;padding:4px 10px}
+  .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--em)}
+  .badge-txt{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--ink)}
+
+  .srow{display:grid;grid-template-columns:130px 1fr;align-items:baseline;column-gap:14px;padding:10px 0;line-height:1.5;border-bottom:1px solid var(--rule)}
+  .srow:last-child{border-bottom:none}
+  .skey{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);line-height:1.5}
+  .sval{font-size:11px;color:var(--ink);line-height:1.5}
+  .sval b{font-weight:700}
+
+  .chk{display:grid;grid-template-columns:12px 1fr;align-items:baseline;column-gap:8px;padding:5px 0;line-height:1.5}
+  .chk-tick{font-size:9px;color:var(--em);font-weight:700;line-height:1.5}
+  .chk-txt{font-size:10px;color:var(--ink2);line-height:1.5}
+
+  .pillar{border-top:2px solid var(--ink);padding-top:12px}
+  .pillar-n{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;color:var(--em);margin-bottom:8px;line-height:1.5}
+  .pillar-t{font-size:12px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:6px}
+  .pillar-d{font-size:10px;color:var(--ink3);line-height:1.6}
+
+  .stat-t{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:600;color:var(--ink);line-height:1.2}
+  .stat-l{font-size:8.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);line-height:1.5;margin-top:4px}
+
+  table.cap{width:100%;border-collapse:collapse}
+  table.cap th{font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:8px 10px 8px 0;border-bottom:1.5px solid var(--ink);line-height:1.5}
+  table.cap td{font-size:10.5px;color:var(--ink);padding:9px 10px 9px 0;border-bottom:1px solid var(--rule);line-height:1.5;vertical-align:baseline;white-space:nowrap}
+  table.cap td.mono{font-size:10px}
+  .tight .srow{padding:7px 0}
+
+  .svg-cap{font-size:8.5px;color:var(--ink4);line-height:1.5;margin-top:8px}
+</style>
+</head>
+<body>
+
+<!-- ════════════════ PAGE 1 · COVER / PLATFORM ════════════════ -->
+<div class="page">
+  <div class="hd">
+    <img src="images/logos/syaala-technologies-full-on-white.png" alt="Syaala">
+    <div class="hd-label">Modular Data Center Product Line · 2026</div>
+  </div>
+
+  <div style="margin-top:54px">
+    <div class="eyebrow" style="margin-bottom:18px">Product Line 2026</div>
+    <h1>Modular AI data centers.<br>Factory-built. Liquid-cooled.<br>Delivered in four months.</h1>
+    <div class="sub" style="margin-top:22px">A single prefabricated platform that scales from a 50 kW edge container to a 10 MW campus: one rack architecture, one container system, one delivery model, end to end from Syaala.</div>
+  </div>
+
+  <div style="margin-top:44px">
+    <div class="h2-rule"><h2>The capacity ladder</h2></div>
+    <svg viewBox="0 0 680 268" style="width:100%;display:block">
+      <!-- gridlines -->
+      <g stroke="#F3F4F6" stroke-width="1">
+        <line x1="156" y1="16" x2="156" y2="222"/><line x1="396" y1="16" x2="396" y2="222"/><line x1="636" y1="16" x2="636" y2="222"/>
+      </g>
+      <!-- axis -->
+      <line x1="80" y1="226" x2="660" y2="226" stroke="#D1D5DB" stroke-width="1"/>
+      <g font-family="JetBrains Mono,monospace" font-size="8.5" fill="#9CA3AF">
+        <line x1="156" y1="226" x2="156" y2="231" stroke="#D1D5DB"/><text x="156" y="244" text-anchor="middle">0.1 MW</text>
+        <line x1="396" y1="226" x2="396" y2="231" stroke="#D1D5DB"/><text x="396" y="244" text-anchor="middle">1 MW</text>
+        <line x1="636" y1="226" x2="636" y2="231" stroke="#D1D5DB"/><text x="636" y="244" text-anchor="middle">10 MW</text>
+      </g>
+      <text x="660" y="262" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#9CA3AF">IT CAPACITY · LOGARITHMIC SCALE</text>
+      <!-- rows -->
+      <g font-family="JetBrains Mono,monospace" font-size="10.5" font-weight="600" fill="#0F1211">
+        <text x="0" y="38">SY-EDGE-100</text>
+        <text x="0" y="92">SY-CORE-1000</text>
+        <text x="0" y="146">SY-BLOCK-3600</text>
+        <text x="0" y="200">SY-CAMPUS</text>
+      </g>
+      <g font-family="Inter,sans-serif" font-size="8.5" fill="#6B7280">
+        <text x="0" y="52">Edge container</text>
+        <text x="0" y="106">Entry AI block</text>
+        <text x="0" y="160">The Syaala Block</text>
+        <text x="0" y="214">Multi-block campus</text>
+      </g>
+      <!-- bars: x(v) = 396 + 240*log10(v) -->
+      <rect x="84"  y="26" width="72"  height="16" rx="2" fill="#10B981"/>
+      <text x="164" y="38" font-family="Inter,sans-serif" font-size="9" fill="#374151">50 – 100 kW · air-cooled</text>
+      <rect x="391" y="80" width="63"  height="16" rx="2" fill="#10B981"/>
+      <text x="462" y="92" font-family="Inter,sans-serif" font-size="9" fill="#374151">2.0 MW · 8 racks · liquid-cooled</text>
+      <rect x="463" y="134" width="64" height="16" rx="2" fill="#10B981"/>
+      <text x="535" y="146" font-family="Inter,sans-serif" font-size="9" fill="#374151">3.6 MW operating / 4.0 MW ceiling · 2N</text>
+      <rect x="527" y="188" width="114" height="16" rx="2" fill="#ECFDF5" stroke="#10B981" stroke-width="1.2"/>
+      <text x="527" y="180" font-family="Inter,sans-serif" font-size="9" fill="#374151">3.6 → 10.8 MW · repeating blocks</text>
+    </svg>
+  </div>
+
+  <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px 32px">
+    <div class="pillar">
+      <div class="pillar-n">01</div>
+      <div class="pillar-t">Liquid-cooled at AI density</div>
+      <div class="pillar-d">100% direct liquid cooling on AI products, engineered to 225 kW design and 250 kW ceiling per rack: today's VR NVL72-class systems run with headroom for the next platform generation.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-n">02</div>
+      <div class="pillar-t">Battery-integrated power</div>
+      <div class="pillar-d">UPS and battery energy storage are factory-built into the power module: a single engineered container, not a field-assembled scope across three vendors.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-n">03</div>
+      <div class="pillar-t">Factory-integrated and tested</div>
+      <div class="pillar-d">Every module is integrated, wired, and witness-tested at the factory before shipment. Site work is placement, interconnection, and commissioning: not construction.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-n">04</div>
+      <div class="pillar-t">Four-month delivery</div>
+      <div class="pillar-d">Standard delivery is four months from order across the product line, with commissioning and energization by Syaala field engineering after arrival.</div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <span>Syaala Technologies, Inc. · syaala.com</span>
+    <span>Modular Data Center Product Line 2026 · 1 / 5</span>
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 2 · SY-EDGE-100 + SY-CORE-1000 ════════════════ -->
+<div class="page">
+  <div class="hd">
+    <img src="images/logos/syaala-technologies-full-on-white.png" alt="Syaala">
+    <div class="hd-label">Edge & Entry Systems</div>
+  </div>
+
+  <!-- EDGE -->
+  <div class="tight" style="margin-top:18px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <div class="badge"><span class="badge-dot"></span><span class="badge-txt">SY-EDGE-100</span></div>
+        <div style="font-size:19px;font-weight:800;letter-spacing:-.01em;margin-top:12px;line-height:1.3">Edge container · single-box turnkey</div>
+        <div style="font-size:11px;color:var(--ink3);line-height:1.6;margin-top:6px;max-width:380px">A complete data center in one ISO container: racks, power, cooling, fire suppression, security, and monitoring. Set it on a pad, connect power and fiber.</div>
+      </div>
+      <div style="text-align:right;flex-shrink:0;padding-left:24px">
+        <div class="stat-t">50–100 kW</div>
+        <div class="stat-l">IT capacity · 20ft / 40ft</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 290px;gap:32px;margin-top:18px">
+      <div>
+        <div class="srow"><div class="skey">Variants</div><div class="sval"><b>20ft · 50 kW · 4 racks</b> or <b>40ft · 100 kW · 8 racks</b></div></div>
+        <div class="srow"><div class="skey">Cooling</div><div class="sval">Integrated precision air · N+1 on 40ft variant</div></div>
+        <div class="srow"><div class="skey">Power</div><div class="sval">Integrated UPS ride-through · generator-ready</div></div>
+        <div class="srow"><div class="skey">Footprint</div><div class="sval mono">8' × 20' (160 sq ft) · 8' × 40' (320 sq ft)</div></div>
+        <div class="srow"><div class="skey">Resilience</div><div class="sval">Tier II-aligned · N+1 critical systems</div></div>
+        <div class="srow"><div class="skey">Delivery</div><div class="sval"><b>4 months from order</b> · commissioned on arrival</div></div>
+      </div>
+      <div>
+        <svg viewBox="0 0 290 112" style="width:100%;display:block">
+          <text x="156" y="10" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6B7280">40FT VARIANT · GA TOP PLAN · 8 × 42U RACKS</text>
+          <!-- shell, double wall -->
+          <rect x="36" y="20" width="240" height="56" fill="#fff" stroke="#0F1211" stroke-width="1.8"/>
+          <rect x="39" y="23" width="234" height="50" fill="none" stroke="#D1D5DB" stroke-width="0.6"/>
+          <!-- UPS / distribution zone -->
+          <rect x="42" y="26" width="22" height="44" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.8"/>
+          <text x="53" y="48" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.5" fill="#374151" transform="rotate(-90 53 48)">UPS · DIST</text>
+          <!-- racks R1-R8 -->
+          <g fill="#F9FAFB" stroke="#9CA3AF" stroke-width="0.8">
+            <rect x="69" y="26" width="18" height="26"/><rect x="90" y="26" width="18" height="26"/>
+            <rect x="111" y="26" width="18" height="26"/><rect x="132" y="26" width="18" height="26"/>
+            <rect x="153" y="26" width="18" height="26"/><rect x="174" y="26" width="18" height="26"/>
+            <rect x="195" y="26" width="18" height="26"/><rect x="216" y="26" width="18" height="26"/>
+          </g>
+          <g font-family="JetBrains Mono,monospace" font-size="4.8" fill="#6B7280" text-anchor="middle">
+            <text x="78" y="42">R1</text><text x="99" y="42">R2</text><text x="120" y="42">R3</text><text x="141" y="42">R4</text>
+            <text x="162" y="42">R5</text><text x="183" y="42">R6</text><text x="204" y="42">R7</text><text x="225" y="42">R8</text>
+          </g>
+          <text x="151" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.5" letter-spacing="1" fill="#9CA3AF">SERVICE AISLE</text>
+          <!-- CRAC N+1 -->
+          <rect x="240" y="26" width="30" height="20" fill="#ECFDF5" stroke="#10B981" stroke-width="0.9"/>
+          <rect x="240" y="50" width="30" height="20" fill="#ECFDF5" stroke="#10B981" stroke-width="0.9"/>
+          <text x="255" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="4.8" fill="#047857">CRAC-1</text>
+          <text x="255" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="4.8" fill="#047857">CRAC-2</text>
+          <!-- personnel door swing -->
+          <path d="M 36 34 A 14 14 0 0 0 22 48" fill="none" stroke="#9CA3AF" stroke-width="0.7"/>
+          <line x1="36" y1="34" x2="22" y2="48" stroke="#9CA3AF" stroke-width="0.7"/>
+          <!-- dims -->
+          <g stroke="#6B7280" stroke-width="0.6">
+            <line x1="36" y1="88" x2="276" y2="88"/><line x1="36" y1="84" x2="36" y2="92"/><line x1="276" y1="84" x2="276" y2="92"/>
+          </g>
+          <text x="156" y="101" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#374151">40'-0"</text>
+          <g stroke="#6B7280" stroke-width="0.6">
+            <line x1="14" y1="20" x2="14" y2="76"/><line x1="10" y1="20" x2="18" y2="20"/><line x1="10" y1="76" x2="18" y2="76"/>
+          </g>
+          <text x="7" y="51" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#374151" transform="rotate(-90 7 51)">8'-0"</text>
+        </svg>
+        <div style="margin-top:10px">
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Racks, PDUs, structured cabling pre-installed</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Clean-agent fire suppression and VESDA</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Access control, CCTV, environment monitoring</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Factory-tested as a complete system</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1px;background:var(--rule2);margin:16px 0"></div>
+
+  <!-- CORE -->
+  <div class="tight">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <div class="badge"><span class="badge-dot"></span><span class="badge-txt">SY-CORE-1000</span></div>
+        <div style="font-size:19px;font-weight:800;letter-spacing:-.01em;margin-top:12px;line-height:1.3">Entry AI block · liquid-cooled megawatt class</div>
+        <div style="font-size:11px;color:var(--ink3);line-height:1.6;margin-top:6px;max-width:380px">Three factory-built modules deliver a 2.0 MW VR entry block with 8 liquid-cooled AI racks in the same compact footprint.</div>
+      </div>
+      <div style="text-align:right;flex-shrink:0;padding-left:24px">
+        <div class="stat-t">2.0 MW</div>
+        <div class="stat-l">8 racks total · same pad</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 290px;gap:32px;margin-top:18px">
+      <div>
+        <div class="srow"><div class="skey">Configuration</div><div class="sval">IT module (8 bays) + power module (UPS · battery) + cooling skid</div></div>
+        <div class="srow"><div class="skey">Rack density</div><div class="sval"><b>225 kW design · 250 kW ceiling</b> per rack · 90% liquid / 10% air</div></div>
+        <div class="srow"><div class="skey">Capacity</div><div class="sval">8 AI rack bays · 2.0 MW ceiling · same footprint</div></div>
+        <div class="srow"><div class="skey">Power</div><div class="sval">N+1 modular UPS · 1,280 kWh LFP battery · generator-ready</div></div>
+        <div class="srow"><div class="skey">Cooling</div><div class="sval">2.35 MW MCDU-60 liquid loop · N+1 pumps · no chillers · PUE 1.10–1.15</div></div>
+        <div class="srow"><div class="skey">Footprint</div><div class="sval mono">~3,000 sq ft developed pad incl. heat rejection</div></div>
+        <div class="srow"><div class="skey">Delivery</div><div class="sval"><b>4 months from order</b> · Syaala-commissioned</div></div>
+      </div>
+      <div>
+        <svg viewBox="0 0 290 132" style="width:100%;display:block">
+          <text x="145" y="10" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6B7280">MODULE ARRANGEMENT · TOP-DOWN</text>
+          <!-- IT module -->
+          <rect x="16" y="22" width="118" height="26" fill="#ECFDF5" stroke="#0F1211" stroke-width="1.5"/>
+          <text x="75" y="33" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.2" font-weight="700" fill="#0F1211">IT MODULE · 40FT</text>
+          <text x="75" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.2" fill="#374151">8 RACK BAYS · DLC · 2.0 MW CEILING</text>
+          <!-- power module -->
+          <rect x="166" y="22" width="108" height="26" fill="#fff" stroke="#0F1211" stroke-width="1.5"/>
+          <text x="220" y="33" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.2" font-weight="700" fill="#0F1211">POWER MODULE · 40FT</text>
+          <text x="220" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.2" fill="#374151">N+1 UPS · BATTERY · DIST</text>
+          <!-- utility stub -->
+          <line x1="274" y1="35" x2="287" y2="35" stroke="#0F1211" stroke-width="1.1" stroke-dasharray="3 2"/>
+          <text x="287" y="27" text-anchor="end" font-family="Inter,sans-serif" font-size="5" fill="#6B7280">UTILITY</text>
+          <!-- 480V feeder PWR -> IT -->
+          <line x1="166" y1="35" x2="139" y2="35" stroke="#10B981" stroke-width="1.6"/>
+          <polygon points="134,35 141,32 141,38" fill="#10B981"/>
+          <!-- CDU skid -->
+          <rect x="16" y="72" width="96" height="24" fill="#fff" stroke="#0F1211" stroke-width="1.3"/>
+          <text x="64" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" font-weight="700" fill="#0F1211">CDU SKID · 20FT HS-20</text>
+          <text x="64" y="91" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.2" fill="#374151">2.35 MW · N+1 PUMPS</text>
+          <!-- dry coolers -->
+          <rect x="140" y="72" width="86" height="24" fill="#fff" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="183" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#6B7280">DRY COOLERS</text>
+          <text x="183" y="91" text-anchor="middle" font-family="Inter,sans-serif" font-size="5.2" fill="#9CA3AF">N+1 · ADIABATIC</text>
+          <!-- liquid loops -->
+          <line x1="40" y1="48" x2="40" y2="72" stroke="#3B82F6" stroke-width="1.4"/>
+          <polygon points="40,51 37,57 43,57" fill="#3B82F6"/>
+          <line x1="112" y1="84" x2="140" y2="84" stroke="#3B82F6" stroke-width="1.4"/>
+          <polygon points="137,84 130,81 130,87" fill="#3B82F6"/>
+          <!-- legend -->
+          <line x1="16" y1="116" x2="34" y2="116" stroke="#10B981" stroke-width="1.6"/>
+          <text x="40" y="119" font-family="Inter,sans-serif" font-size="5.5" fill="#374151">480V POWER</text>
+          <line x1="110" y1="116" x2="128" y2="116" stroke="#3B82F6" stroke-width="1.4"/>
+          <text x="134" y="119" font-family="Inter,sans-serif" font-size="5.5" fill="#374151">LIQUID LOOP (TCS)</text>
+          <line x1="210" y1="116" x2="228" y2="116" stroke="#0F1211" stroke-width="1.1" stroke-dasharray="3 2"/>
+          <text x="234" y="119" font-family="Inter,sans-serif" font-size="5.5" fill="#374151">UTILITY FEED</text>
+        </svg>
+        <div style="margin-top:10px">
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Same rack and container platform as the Syaala Block</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Grows in place: no civil works at expansion</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Pairs into the Block architecture for 2N resilience</span></div>
+          <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Witnessed factory acceptance test before shipment</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <span>Syaala Technologies, Inc. · syaala.com</span>
+    <span>Modular Data Center Product Line 2026 · 2 / 5</span>
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 3 · SY-BLOCK-3600 ════════════════ -->
+<div class="page">
+  <div class="hd">
+    <img src="images/logos/syaala-technologies-full-on-white.png" alt="Syaala">
+    <div class="hd-label">The Syaala Block</div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-top:28px">
+    <div>
+      <div class="badge"><span class="badge-dot"></span><span class="badge-txt">SY-BLOCK-3600</span></div>
+      <div style="font-size:19px;font-weight:800;letter-spacing:-.01em;margin-top:12px;line-height:1.3">The Syaala Block · 3.6 MW operating in one footprint</div>
+      <div style="font-size:11px;color:var(--ink3);line-height:1.6;margin-top:6px;max-width:400px">The flagship building block: a 2N liquid-cooled VR pod delivering 3.6 MW operating capacity with 4.0 MW facility headroom inside the same site envelope.</div>
+    </div>
+    <div style="display:flex;gap:28px;flex-shrink:0;padding-left:24px;text-align:right">
+      <div><div class="stat-t">3.6 MW</div><div class="stat-l">Operating · 16 racks</div></div>
+      <div><div class="stat-t">0.30 ac</div><div class="stat-l">Envelope incl. fire access</div></div>
+    </div>
+  </div>
+
+  <!-- FOOTPRINT PLAN -->
+  <div style="margin-top:16px;border:1px solid var(--rule);background:#FDFDFD;padding:14px 14px 10px">
+    <svg viewBox="0 0 700 478" style="width:100%;display:block">
+      <!-- fire access envelope: 142 x 90 ft, scale 4.4 px/ft, origin (30,30) -->
+      <rect x="30" y="30" width="624.8" height="396" fill="#fff" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="8 5"/>
+      <text x="40" y="417" font-family="Inter,sans-serif" font-size="7.5" fill="#6B7280">28'-0" FIRE APPARATUS ACCESS PERIMETER</text>
+
+      <!-- concrete pads (24in margin, dashed) -->
+      <g fill="none" stroke="#D8D8D8" stroke-width="0.6" stroke-dasharray="3 2.5">
+        <rect x="144.4" y="144.4" width="193.6" height="52.8"/>
+        <rect x="144.4" y="214.8" width="193.6" height="52.8"/>
+        <rect x="342.4" y="74" width="52.8" height="193.6"/>
+        <rect x="390.8" y="74" width="52.8" height="193.6"/>
+        <rect x="439.2" y="74" width="52.8" height="193.6"/>
+        <rect x="487.6" y="74" width="52.8" height="193.6"/>
+        <rect x="144.4" y="276.4" width="158.4" height="57.2"/>
+        <rect x="144.4" y="333.6" width="158.4" height="57.2"/>
+      </g>
+
+      <!-- feeder conduit corridor -->
+      <rect x="329.2" y="153.2" width="22" height="105.6" fill="#F5F5F5"/>
+
+      <!-- IT-A1 rack bays -->
+      <g stroke="none">
+        <rect x="153.2" y="153.2" width="22" height="35.2" fill="#D1FAE5"/><rect x="175.2" y="153.2" width="22" height="35.2" fill="#D1FAE5"/>
+        <rect x="197.2" y="153.2" width="22" height="35.2" fill="#D1FAE5"/><rect x="219.2" y="153.2" width="22" height="35.2" fill="#D1FAE5"/>
+        <rect x="241.2" y="153.2" width="22" height="35.2" fill="#D1FAE5"/>
+      </g>
+      <rect x="153.2" y="153.2" width="176" height="35.2" fill="none" stroke="#0F1211" stroke-width="1.6"/>
+      <text x="241.2" y="168" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="600" fill="#0F1211">IT-A1</text>
+      <text x="241.2" y="180" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">8 RACKS TOTAL · DLC</text>
+      <!-- corridor -->
+      <rect x="153.2" y="188.4" width="176" height="35.2" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="0.7"/>
+      <text x="241.2" y="208.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#9CA3AF">8'-0" SERVICE CORRIDOR</text>
+      <!-- IT-A2 rack bays -->
+      <g stroke="none">
+        <rect x="153.2" y="223.6" width="22" height="35.2" fill="#D1FAE5"/><rect x="175.2" y="223.6" width="22" height="35.2" fill="#D1FAE5"/>
+        <rect x="197.2" y="223.6" width="22" height="35.2" fill="#D1FAE5"/><rect x="219.2" y="223.6" width="22" height="35.2" fill="#D1FAE5"/>
+        <rect x="241.2" y="223.6" width="22" height="35.2" fill="#D1FAE5"/>
+      </g>
+      <rect x="153.2" y="223.6" width="176" height="35.2" fill="none" stroke="#0F1211" stroke-width="1.6"/>
+      <text x="241.2" y="238.4" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="600" fill="#0F1211">IT-A2</text>
+      <text x="241.2" y="250.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">8 RACKS TOTAL · DLC</text>
+
+      <!-- rack bay ticks -->
+      <g stroke="#10B981" stroke-width="0.6" opacity="0.55">
+        <line x1="175.2" y1="153.2" x2="175.2" y2="188.4"/><line x1="197.2" y1="153.2" x2="197.2" y2="188.4"/>
+        <line x1="219.2" y1="153.2" x2="219.2" y2="188.4"/><line x1="241.2" y1="153.2" x2="241.2" y2="188.4"/>
+        <line x1="263.2" y1="153.2" x2="263.2" y2="188.4"/><line x1="285.2" y1="153.2" x2="285.2" y2="188.4"/>
+        <line x1="307.2" y1="153.2" x2="307.2" y2="188.4"/>
+        <line x1="175.2" y1="223.6" x2="175.2" y2="258.8"/><line x1="197.2" y1="223.6" x2="197.2" y2="258.8"/>
+        <line x1="219.2" y1="223.6" x2="219.2" y2="258.8"/><line x1="241.2" y1="223.6" x2="241.2" y2="258.8"/>
+        <line x1="263.2" y1="223.6" x2="263.2" y2="258.8"/><line x1="285.2" y1="223.6" x2="285.2" y2="258.8"/>
+        <line x1="307.2" y1="223.6" x2="307.2" y2="258.8"/>
+      </g>
+
+      <!-- PWR-A / PWR-B -->
+      <rect x="351.2" y="82.8" width="35.2" height="176" fill="#fff" stroke="#0F1211" stroke-width="1.6"/>
+      <text x="372" y="170.8" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="600" fill="#0F1211" transform="rotate(-90 372 170.8)">PWR-A · PDC + 4×800 KVA UPS</text>
+      <rect x="399.6" y="82.8" width="35.2" height="176" fill="#fff" stroke="#0F1211" stroke-width="1.6"/>
+      <text x="420.4" y="170.8" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="600" fill="#0F1211" transform="rotate(-90 420.4 170.8)">PWR-B · PDC + 4×800 KVA UPS</text>
+      <!-- Outdoor BESS pads (NFPA 855 - ESS out of container) -->
+      <rect x="448" y="82.8" width="35.2" height="176" fill="#fff" stroke="#9CA3AF" stroke-width="1.1" stroke-dasharray="5 4"/>
+      <text x="468.8" y="170.8" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6B7280" transform="rotate(-90 468.8 170.8)">BESS PAD · 1,280 KWH (NFPA 855)</text>
+      <rect x="496.4" y="82.8" width="35.2" height="176" fill="#fff" stroke="#9CA3AF" stroke-width="1.1" stroke-dasharray="5 4"/>
+      <text x="517.2" y="170.8" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6B7280" transform="rotate(-90 517.2 170.8)">BESS PAD · 1,280 KWH (NFPA 855)</text>
+
+      <!-- CDU skids -->
+      <rect x="153.2" y="285.2" width="140.8" height="39.6" fill="#fff" stroke="#0F1211" stroke-width="1.4"/>
+      <text x="223.6" y="302" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" font-weight="600" fill="#0F1211">CDU SKID 1</text>
+      <text x="223.6" y="314" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">2.35 MW MCDU-60 · N+1 PUMPS · SERVES IT-A2</text>
+      <rect x="153.2" y="342.4" width="140.8" height="39.6" fill="#fff" stroke="#0F1211" stroke-width="1.4"/>
+      <text x="223.6" y="359.2" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" font-weight="600" fill="#0F1211">CDU SKID 2</text>
+      <text x="223.6" y="371.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">2.35 MW MCDU-60 · N+1 PUMPS · SERVES IT-A1</text>
+      <!-- cooling yard boundary -->
+      <rect x="142.2" y="269.8" width="162.8" height="127.6" fill="none" stroke="#9CA3AF" stroke-width="0.8" stroke-dasharray="6 4"/>
+      <text x="223.6" y="280" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" letter-spacing="1" fill="#9CA3AF">COOLING YARD</text>
+
+      <!-- liquid loops -->
+      <g stroke="#3B82F6" stroke-width="1.3" fill="none">
+        <line x1="270" y1="285.2" x2="270" y2="258.8"/>
+        <polyline points="160,342.4 160,332 146,332 146,170.8 153.2,170.8"/>
+      </g>
+      <g fill="#3B82F6">
+        <polygon points="270,258.8 267,264.4 273,264.4"/>
+        <polygon points="153.2,170.8 147.6,167.8 147.6,173.8"/>
+      </g>
+
+      <!-- feeders IT<->PWR -->
+      <g stroke="#10B981" stroke-width="1.5" fill="none">
+        <line x1="329.2" y1="175" x2="351.2" y2="175"/>
+        <line x1="329.2" y1="241.2" x2="351.2" y2="241.2"/>
+      </g>
+
+      <!-- zone tags -->
+      <text x="241.2" y="142" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1.5" fill="#374151">IT ZONE</text>
+      <text x="441.4" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1.5" fill="#374151">POWER ZONE</text>
+      <text x="490" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" letter-spacing="1.2" fill="#9CA3AF">RESERVED POWER AREA</text>
+
+      <!-- north arrow -->
+      <circle cx="633" cy="56" r="10" fill="#fff" stroke="#9CA3AF" stroke-width="0.8"/>
+      <polygon points="633,48.5 629.5,59 636.5,59" fill="#374151"/>
+      <text x="633" y="78" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#6B7280">PLAN</text>
+
+      <!-- legend -->
+      <rect x="336" y="290" width="310" height="116" fill="#fff" stroke="#E5E7EB" stroke-width="0.8"/>
+      <text x="348" y="305" font-family="Inter,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2" fill="#374151">LEGEND</text>
+      <rect x="348" y="313" width="20" height="9" fill="#D1FAE5" stroke="#10B981" stroke-width="0.7"/>
+      <text x="376" y="320.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">RACK BAY · LIQUID-COOLED</text>
+      <rect x="348" y="327" width="20" height="9" fill="#fff" stroke="#10B981" stroke-width="0.7"/>
+      <text x="376" y="334.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">RACK BAY · OPEN FOR FULL BUILD</text>
+      <rect x="348" y="341" width="20" height="9" fill="#fff" stroke="#0F1211" stroke-width="1.2"/>
+      <text x="376" y="348.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">MODULE · FACTORY-INTEGRATED</text>
+      <rect x="348" y="355" width="20" height="9" fill="#fff" stroke="#9CA3AF" stroke-width="0.9" stroke-dasharray="3 2.5"/>
+      <text x="376" y="362.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">RESERVED MODULE PAD</text>
+      <line x1="348" y1="373.5" x2="368" y2="373.5" stroke="#10B981" stroke-width="1.5"/>
+      <text x="376" y="376.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">480V FEEDER (A/B PAIR)</text>
+      <line x1="348" y1="387.5" x2="368" y2="387.5" stroke="#3B82F6" stroke-width="1.3"/>
+      <text x="376" y="390.5" font-family="Inter,sans-serif" font-size="6.5" fill="#374151">LIQUID COOLING LOOP (TCS)</text>
+
+      <!-- dims: equipment width 86 ft -->
+      <g stroke="#6B7280" stroke-width="0.7">
+        <line x1="153.2" y1="52" x2="531.6" y2="52"/>
+        <line x1="153.2" y1="47" x2="153.2" y2="57"/><line x1="531.6" y1="47" x2="531.6" y2="57"/>
+      </g>
+      <text x="342.4" y="46" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#374151">86'-0" EQUIPMENT ENVELOPE</text>
+      <!-- dims: equipment height 68 ft -->
+      <g stroke="#6B7280" stroke-width="0.7">
+        <line x1="568" y1="82.8" x2="568" y2="382"/>
+        <line x1="563" y1="82.8" x2="573" y2="82.8"/><line x1="563" y1="382" x2="573" y2="382"/>
+      </g>
+      <text x="582" y="235" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#374151" transform="rotate(-90 582 235)">68'-0"</text>
+      <!-- overall dims incl. fire access -->
+      <g stroke="#9CA3AF" stroke-width="0.6">
+        <line x1="30" y1="444" x2="654.8" y2="444"/>
+        <line x1="30" y1="439" x2="30" y2="449"/><line x1="654.8" y1="439" x2="654.8" y2="449"/>
+      </g>
+      <text x="342.4" y="460" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6B7280">142'-0" OVERALL · INCL. FIRE ACCESS</text>
+      <g stroke="#9CA3AF" stroke-width="0.6">
+        <line x1="14" y1="30" x2="14" y2="426"/>
+        <line x1="9" y1="30" x2="19" y2="30"/><line x1="9" y1="426" x2="19" y2="426"/>
+      </g>
+      <text x="7" y="228" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6B7280" transform="rotate(-90 7 228)">90'-0"</text>
+    </svg>
+    <div class="svg-cap">SY-BLOCK-3600 site footprint, looking down. Operating modules solid; reserved power pads shown dashed. Outdoor heat rejection adjacent to the cooling yard. Not to scale for construction.</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:14px">
+    <div>
+      <div class="srow"><div class="skey">Capacity</div><div class="sval"><b>3.6 MW operating / 4.0 MW ceiling</b> · 16 racks × 250 kW ceiling</div></div>
+      <div class="srow"><div class="skey">Power</div><div class="sval"><b>2N distribution</b> · dual utility transformers · 4 × 800 kVA UPS per side · 2× 1,280 kWh LFP BESS on outdoor pads (NFPA 855)</div></div>
+      <div class="srow"><div class="skey">Cooling</div><div class="sval">90% liquid / 10% air · MCDU-60 N+1 CDUs · dry/adiabatic rejection · PUE 1.10–1.15</div></div>
+      <div class="srow"><div class="skey">Resilience</div><div class="sval">Tier II-aligned base (2N power) · Tier III-aligned option with standby generation</div></div>
+    </div>
+    <div>
+      <div class="srow"><div class="skey">Thermal path</div><div class="sval">TCS 45/65°C · facility water 35/45°C · plate HX isolated</div></div>
+      <div class="srow"><div class="skey">Footprint</div><div class="sval mono">86' × 68' equipment · 0.30 ac incl. 28' fire access</div></div>
+      <div class="srow"><div class="skey">Density</div><div class="sval">Runs VR NVL72-class racks at 225 kW design with 250 kW facility headroom per rack</div></div>
+      <div class="srow"><div class="skey">Delivery</div><div class="sval"><b>4 months from order</b> · energization ~6 months, site-ready basis</div></div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <span>Syaala Technologies, Inc. · syaala.com</span>
+    <span>Modular Data Center Product Line 2026 · 3 / 5</span>
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 4 · SCALE + DELIVERY ════════════════ -->
+<div class="page">
+  <div class="hd">
+    <img src="images/logos/syaala-technologies-full-on-white.png" alt="Syaala">
+    <div class="hd-label">Scaling & Delivery Model</div>
+  </div>
+
+  <div style="margin-top:28px">
+    <div class="h2-rule"><h2>One platform · 1 to 10.8 MW</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 270px;gap:36px;align-items:start">
+      <table class="cap">
+        <tr><th>Configuration</th><th>IT capacity</th><th>AI racks</th><th>Equipment envelope</th></tr>
+        <tr><td>SY-CORE-1000</td><td class="mono">2.0 MW</td><td class="mono">8</td><td class="mono">~3,000 sq ft pad</td></tr>
+        <tr><td>SY-BLOCK-3600 · operating</td><td class="mono">3.6 MW</td><td class="mono">16</td><td class="mono">0.30 ac</td></tr>
+        <tr><td>SY-BLOCK-3600 · ceiling</td><td class="mono">4.0 MW</td><td class="mono">16</td><td class="mono">same envelope</td></tr>
+        <tr><td>SY-CAMPUS · 2 blocks</td><td class="mono">7.2 MW</td><td class="mono">32</td><td class="mono">~0.6 ac</td></tr>
+        <tr><td>SY-CAMPUS · 3 blocks</td><td class="mono">10.8 MW</td><td class="mono">48</td><td class="mono">~0.9 ac</td></tr>
+      </table>
+      <div>
+        <svg viewBox="0 0 270 314" style="width:100%;display:block">
+          <rect x="6" y="14" width="258" height="258" fill="#fff" stroke="#0F1211" stroke-width="1.4"/>
+          <!-- block 1: 142 x 90 ft at 1.236 px/ft -->
+          <rect x="16" y="24" width="175.5" height="111.2" fill="#ECFDF5" stroke="#10B981" stroke-width="1.4"/>
+          <text x="104" y="66" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="600" fill="#0F1211">SY-BLOCK-3600 · 1</text>
+          <text x="104" y="79" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#374151">3.6 MW · 0.30 AC</text>
+          <text x="104" y="91" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#6B7280">INCL. FIRE ACCESS PERIMETER</text>
+          <!-- block 2: expansion -->
+          <rect x="16" y="146" width="175.5" height="111.2" fill="#fff" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="6 4"/>
+          <text x="104" y="194" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6B7280">BLOCK 2 · EXPANSION</text>
+          <text x="104" y="207" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#9CA3AF">+3.6 MW · SAME ENVELOPE</text>
+          <!-- balance strip -->
+          <text x="228" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#9CA3AF" transform="rotate(-90 228 143)">SUBSTATION · HEAT REJECTION · ACCESS · STORMWATER</text>
+          <text x="135" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#374151">1 ACRE · 208' × 208'</text>
+          <text x="135" y="304" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="#0F1211">UP TO 7.2 MW PER ACRE</text>
+        </svg>
+        <div class="svg-cap">Equipment-envelope basis. Net site density is site-specific: setbacks, utility yard, and stormwater govern.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:30px">
+    <div class="h2-rule"><h2>Delivery model · order to energization</h2></div>
+    <svg viewBox="0 0 680 120" style="width:100%;display:block">
+      <line x1="20" y1="58" x2="660" y2="58" stroke="#D1D5DB" stroke-width="1"/>
+      <g font-family="JetBrains Mono,monospace" font-size="8" fill="#9CA3AF">
+        <text x="20" y="80" text-anchor="middle">M0</text><text x="126" y="80" text-anchor="middle">M1</text>
+        <text x="233" y="80" text-anchor="middle">M2</text><text x="340" y="80" text-anchor="middle">M3</text>
+        <text x="446" y="80" text-anchor="middle">M4</text><text x="553" y="80" text-anchor="middle">M5</text>
+        <text x="660" y="80" text-anchor="middle">M6</text>
+      </g>
+      <g>
+        <rect x="20" y="30" width="106" height="14" rx="2" fill="#0F1211"/>
+        <rect x="126" y="30" width="320" height="14" rx="2" fill="#10B981"/>
+        <rect x="446" y="30" width="214" height="14" rx="2" fill="#ECFDF5" stroke="#10B981" stroke-width="1"/>
+      </g>
+      <g font-family="Inter,sans-serif" font-size="8.5" fill="#374151">
+        <text x="20" y="22">Engineering release</text>
+        <text x="126" y="22">Factory integration · witnessed FAT</text>
+        <text x="446" y="22">Site placement · commissioning</text>
+      </g>
+      <g>
+        <circle cx="446" cy="58" r="4" fill="#0F1211"/>
+        <text x="446" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#0F1211">DELIVERY · 4 MONTHS</text>
+        <circle cx="660" cy="58" r="4" fill="#10B981"/>
+        <text x="652" y="103" text-anchor="end" font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#0F1211">ENERGIZATION</text>
+      </g>
+    </svg>
+    <div class="svg-cap">Standard schedule, site-ready basis. Site preparation, utility interconnection, and permitting run in parallel and are coordinated by Syaala with the customer's utility and AHJ.</div>
+  </div>
+
+  <div style="margin-top:28px">
+    <div class="h2-rule"><h2>Turnkey scope · single vendor, end to end</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 36px">
+      <div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Design and engineering of record support</span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Manufacturing and full factory integration</span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Witnessed factory acceptance testing</span></div>
+      </div>
+      <div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Shipping, logistics, and site delivery</span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Installation supervision and interconnection</span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Commissioning, training, and handover</span></div>
+      </div>
+      <div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">24/7 remote monitoring and NOC <i>(optional)</i></span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Maintenance and spares programs <i>(optional)</i></span></div>
+        <div class="chk"><span class="chk-tick">●</span><span class="chk-txt">Standby generation for Tier III-aligned sites <i>(optional)</i></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <span>Syaala Technologies, Inc. · syaala.com</span>
+    <span>Modular Data Center Product Line 2026 · 4 / 5</span>
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 5 · BACK COVER ════════════════ -->
+<div class="page">
+  <div class="hd">
+    <img src="images/logos/syaala-technologies-full-on-white.png" alt="Syaala">
+    <div class="hd-label">About</div>
+  </div>
+
+  <div style="margin-top:120px;max-width:480px">
+    <div class="eyebrow" style="margin-bottom:16px">Syaala Technologies</div>
+    <div style="font-size:24px;font-weight:800;letter-spacing:-.015em;line-height:1.25">Infrastructure for the AI buildout, productized.</div>
+    <div style="font-size:12px;color:var(--ink2);line-height:1.75;margin-top:18px">Syaala Technologies, Inc. is a US company that designs, manufactures, and delivers prefabricated modular data centers for AI and high-density compute. Every product in this line shares one engineering platform: liquid-cooled racks to 250 kW ceiling, battery-integrated power modules, and factory integration with witnessed acceptance testing, so capacity arrives as a tested system, not a construction project.</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px;max-width:560px">
+    <div><div class="stat-t">250 kW</div><div class="stat-l">Per-rack ceiling</div></div>
+    <div><div class="stat-t">2N</div><div class="stat-l">Block power path</div></div>
+    <div><div class="stat-t">1.10</div><div class="stat-l">PUE class, annualized</div></div>
+    <div><div class="stat-t">4 mo</div><div class="stat-l">Standard delivery</div></div>
+  </div>
+
+  <div style="margin-top:72px">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);line-height:1.5">Engage</div>
+    <div style="font-size:11.5px;color:var(--ink2);line-height:1.7;margin-top:8px;max-width:480px">Site assessments, configuration studies, and detailed engineering packages are available under NDA. Reach the team at <b>syaala.com</b>.</div>
+  </div>
+
+  <div style="margin-top:auto;padding-top:24px">
+    <div style="font-size:8px;color:var(--ink4);line-height:1.7;max-width:640px;border-top:1px solid var(--rule);padding-top:12px">This document is for general information only and does not constitute an offer, specification of record, or commitment to supply. All capacities, footprints, efficiency figures, and schedules are indicative design values, subject to site-specific engineering, utility coordination, and final configuration at order. Tier references indicate design alignment and do not represent Uptime Institute certification. © 2026 Syaala Technologies, Inc. All rights reserved.</div>
+  </div>
+
+  <div class="ft">
+    <span>Syaala Technologies, Inc. · syaala.com</span>
+    <span>Modular Data Center Product Line 2026 · 5 / 5</span>
+  </div>
+</div>
+
+</body>
+</html>
